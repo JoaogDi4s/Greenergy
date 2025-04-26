@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonte Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+    <title>Greenergy</title>
+</head>
+
+<body>
+    <!-- Início -->
+    <div class="tela1">
+        <!-- Menu navegação -->
+        <div class="menuNavegação">
+            <!-- Título -->
+            <h1>Greenergy</h1>
+            <!-- Ícone do menu hamburguer -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- Navegação -->
+            <nav>
+                <a href="#Sobre">Sobre</a>
+                <a href="#Contato">Contato</a>
+                <a href="{{ url_for('OqueSao') }}">O que são</a>
+                <a href="#">Energias</a>
+                <a href="#">Estatísticas</a>
+            </nav>
+        </div>
+        <div class="titulo">
+            <h1>Greenergy</h1>
+            <p>Powering a sustainable future through innovative renewable energy solutions.</p>
+        </div>
+    </div>
+
+    <!-- Sobre -->
+    <div class="tela2">
+        <h1 id="Sobre">
+            Sobre o projeto
+        </h1>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+    <!-- Contato -->
+    <div class="tela3">
+        <h1 id="Contato">Entre em contato</h1>
+        <div class="inputs">
+            <input type="text" name="nome" id="nome" placeholder="Seu nome">
+            <input type="email" name="email" id="email" placeholder="Seu Email">
+            <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".menuNavegação nav");
+            nav.classList.toggle("show");
+        }
+
+        // Fecha o menu ao clicar num link (em mobile)
+        document.querySelectorAll(".menuNavegação nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.querySelector(".menuNavegação nav").classList.remove("show");
+            });
+        });
+    </script>
+</body>
+
+</html>
