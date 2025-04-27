@@ -1,7 +1,17 @@
-.curiosidades{
+.tela1{
+    background-color: black;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.conteudo{
+margin: 5rem;
+}
+
+.listaCuriosidades{
     width: 100%;
 }
-.curiosidades li{
+.listaCuriosidades li{
     padding-right: 7rem;
     margin: 0 5rem;
 }
