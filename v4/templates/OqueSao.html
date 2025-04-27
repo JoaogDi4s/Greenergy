@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css')}}">
+
 
     <title>Greenergy</title>
 </head>
@@ -22,9 +24,9 @@
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <!-- Navegação -->
             <nav>
-                <a href="/index.html#Sobre">Sobre</a>
-                <a href="/index.html#Contato">Contato</a>
-                <a href="#">O que são</a>
+                <a href="/index#Sobre">Sobre</a>
+                <a href="/index#Contato">Contato</a>
+                <a href="/OqueSao">O que são</a>
                 <a href="#">Energias</a>
                 <a href="#">Estatísticas</a>
             </nav>
@@ -90,7 +92,7 @@
                     veritatis
                     reiciendis, quia reprehenderit expedita. Ullam.</p>
                 <div class="grafico">
-                    <img src="{{ url_for('static', filename='imagens/image10-1-e1692038470927.jpg') }}" alt=""
+                    <img src="{{ url_for('static', filename='imagens/crescimentoEmpregados.png') }}" alt="crescimentoEmrepregados"
                         width="40%">
                     <figcaption>Crescimento do setor de energias renováveis e aumento de empregos no setor.</figcaption>
                 </div>
@@ -123,42 +125,42 @@
                 <div class="opcao">
 
                     <h2>Hídrica</h2>
-                    <a href="">
+                    <a href="/hidrica">
                         <img src="{{ url_for('static', filename='imagens/hidrica.png') }}" alt="Hídrica">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Solar</h2>
-                    <a href="">
+                    <a href="#">
                         <img src="{{ url_for('static', filename='imagens/solar.png') }}" alt="Solar">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Eólica</h2>
-                    <a href="">
+                    <a href="#">
                         <img src="{{ url_for('static', filename='imagens/eolica.png') }}" alt="Eólica">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Biomassa</h2>
-                    <a href="">
+                    <a href="#">
                         <img src="{{ url_for('static', filename='imagens/biomassa.png') }}" alt="Biomassa">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Geotérmica</h2>
-                    <a href="">
+                    <a href="#">
                         <img src="{{ url_for('static', filename='imagens/geotermica.png') }}" alt="Geotérmica">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Oceânica</h2>
-                    <a href="">
+                    <a href="#">
                         <img src="{{ url_for('static', filename='imagens/oceanica.png') }}" alt="Oceânica">
                     </a>
                 </div>
