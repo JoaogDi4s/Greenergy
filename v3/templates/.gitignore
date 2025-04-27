@@ -1,0 +1,67 @@
+# =======================
+# PYTHON
+# =======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+pip-log.txt
+
+
+# =======================
+# NODE.JS / FRONTEND
+# =======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+# (opcional, só ignore package-lock.json se você NÃO quiser travar dependências)
+
+
+# =======================
+# SISTEMAS OPERACIONAIS
+# =======================
+.DS_Store
+Thumbs.db
+
+
+# =======================
+# IDEs E EDITORES
+# =======================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+# =======================
+# LOGS E TEMPORÁRIOS
+# =======================
+*.log
+*.tmp
+*.swp
+*.bak
+
+
+# =======================
+# ARQUIVOS DE COMPILAÇÃO WEB (opcional)
+# =======================
+/dist/
+/build/
+/out/
+*.map
+
+
+# =======================
+# ARQUIVOS PESSOAIS E DE BACKUP
+# =======================
+*.~*
+*~ 
