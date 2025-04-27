@@ -1,21 +1,28 @@
-.curiosidades {
-    width: 100%;
+.tela1{
+    background-color: black;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.conteudo{
+margin: 5rem;
 }
 
-.curiosidades li {
+.listaCuriosidades{
+    width: 100%;
+}
+.listaCuriosidades li{
     padding-right: 7rem;
     margin: 0 5rem;
 }
-
-.interacoes {
+.interacoes{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
 }
-
-.interacoes a {
+.interacoes a{
     margin: 10px 0;
     height: 70px;
     width: 50rem;
@@ -29,12 +36,10 @@
     color: white;
     background-color: #68D391;
 }
-
-.interacoes a:hover {
+.interacoes a:hover{
     transform: scale(1.05);
 }
-
-.opcoes a.ativo {
+.opcoes a.ativo{
     background-color: #2f855a;
     pointer-events: none;
     opacity: 0.7;

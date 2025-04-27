@@ -1,4 +1,28 @@
+h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    width: 90%;
+    border-radius: 2rem;
+    background-color: #9bffc2;
+    text-decoration: none;
+}
+.menuNavegação h1{
+    padding: 0;
+    display: block;
+    width: 5rem;
+    background-color: transparent;
+}
+.titulo{
+    margin-top: 5rem;
+}
 .titulo h1 {
+    padding: 0;
+    display: block;
+    background-color: transparent;
+    width: 100%;
     font-size: 2.5rem;
 }
 
@@ -11,12 +35,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .tela2 h1 {
     color: #247552;
     justify-self: center;
     padding-bottom: 2rem;
+    margin-top: 3rem;
 }
 
 .tela2 h2 {
@@ -25,7 +51,7 @@
     padding-left: 5rem;
 }
 
-.tela2 p {
+.tela2 p, li {
     color: #247552;
     width: 95%;
     font-size: 1.5rem;
@@ -43,33 +69,20 @@
     color: #247552;
 }
 
-/* Estilo para imagens de gráficos */
-.grafico img {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    /* Para garantir que a largura seja ajustada ao container */
-}
-
-/* Menu Energias */
-.menuEnergias {
+#menuEnergias{
     height: 100%;
     width: 100%;
     background-color: #247552;
-    margin-top: 45px;
-    padding: 1rem;
+    margin-top: 3rem;
+    padding-bottom: 20px;
 }
-
-.menuEnergias h1 {
-    margin: 3.125rem 0 0 0;
+#menuEnergias h1{
+    margin: 50px 0 0 0;
+}
+#menuEnergias h2{
     color: white;
 }
-
-.menuEnergias h2 {
-    color: white;
-}
-
-.opcoes {
+.opcoes{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
@@ -77,8 +90,7 @@
     margin: 0 auto;
     padding: 1rem;
 }
-
-.opcao a {
+.opcao a{
     background-color: #68D391;
     border-radius: 0.75rem;
     text-align: center;
@@ -86,36 +98,39 @@
     width: 12.5rem;
     text-decoration: none;
     color: white;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
     transition: transform 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .opcao a:hover {
     transform: scale(1.05);
 }
-
-.opcao {
+.opcao{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.opcao h2 {
+.opcao h2{
     padding-left: 0;
 }
-
-.opcao img {
+.opcao img{
     width: 12rem;
     height: 12rem;
+}
+
+/* Estilo para imagens de gráficos */
+.grafico img{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    /* Para garantir que a largura seja ajustada ao container */
 }
 
 /* ============================= */
 /* MEDIA QUERIES */
 /* ============================= */
-
 /* Tablet */
 @media (max-width: 768px) {
 

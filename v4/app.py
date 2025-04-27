@@ -28,5 +28,21 @@ def solar():
     graficos.aumentoEconomiaSolar()
     return render_template('solar.html')
 
+@app.route('/eolica')
+def eolica():
+    return render_template('eolica.html')
+
+@app.route('/biomassa')
+def biomassa():
+    return render_template('biomassa.html')
+
+@app.route('/geotermica')
+def geotermica():
+    return render_template('geotermica.html')
+
+@app.route('/oceanica')
+def oceanica():
+    return render_template('oceanica.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

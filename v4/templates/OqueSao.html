@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css')}}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
 
     <title>Greenergy</title>
 </head>
+<style>
+    .tela1 {
+        background-image: url("{{ url_for('static', filename='imagens/paisagemVerde.jpg') }}");
+        background-color: black;
+    }
+</style>
 
 <body>
     <!-- Início -->
@@ -27,7 +32,7 @@
                 <a href="/index#Sobre">Sobre</a>
                 <a href="/index#Contato">Contato</a>
                 <a href="/OqueSao">O que são</a>
-                <a href="#">Energias</a>
+                <a href="#menuEnergias">Energias</a>
                 <a href="#">Estatísticas</a>
             </nav>
         </div>
@@ -45,60 +50,74 @@
     <div class="tela2">
         <div>
             <h1>Benefícios das energias renováveis</h1>
-            <div>
-                <h2>Diminuição da Dependência de Combustíveis Fósseis</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
-                    aliquid
-                    numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium quisquam
-                    vitae,
-                    soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
-                    dignissimos
-                    numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
-                    veritatis
-                    reiciendis, quia reprehenderit expedita. Ullam.</p>
-            </div>
-            <div>
-                <h2>Redução de Emissões de Gases de Efeito Estufa</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
-                    aliquid
-                    numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium quisquam
-                    vitae,
-                    soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
-                    dignissimos
-                    numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
-                    veritatis
-                    reiciendis, quia reprehenderit expedita. Ullam.</p>
-                <div class="grafico">
-                    <img src="{{ url_for('static', filename='imagens/matrizEnergetica.png') }}" alt="grafico de pizza"
-                        width="50%">
-                    <figcaption>Matriz energética entre fontes renováveis e não-renováveis no Brasil</figcaption>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Diminuição da Dependência de Combustíveis Fósseis</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore
+                        blanditiis
+                        aliquid
+                        numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium
+                        quisquam
+                        vitae,
+                        soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+                        dignissimos
+                        numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
+                        veritatis
+                        reiciendis, quia reprehenderit expedita. Ullam.</p>
+                </div>
+                <div>
+                    <h2>Redução de Emissões de Gases de Efeito Estufa</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore
+                        blanditiis
+                        aliquid
+                        numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium
+                        quisquam
+                        vitae,
+                        soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+                        dignissimos
+                        numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
+                        veritatis
+                        reiciendis, quia reprehenderit expedita. Ullam.</p>
+                    <div class="grafico">
+                        <img src="{{ url_for('static', filename='imagens/matrizEnergetica.png') }}" alt="grafico de pizza" width="50%">
+                        <figcaption>Matriz energética entre fontes renováveis e não-renováveis no Brasil</figcaption>
+                    </div>
+                </div>
+                <div>
+                    <h2>Criação de Empregos e Desenvolvimento Econômico</h2>
+                    <p>Lorem Ipsum Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only.</p>
+                </div>
+                <div>
+                    <h2>Economia a Longo Prazo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore
+                        blanditiis
+                        aliquid
+                        numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium
+                        quisquam
+                        vitae,
+                        soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+                        dignissimos
+                        numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
+                        veritatis
+                        reiciendis, quia reprehenderit expedita. Ullam.</p>
+                    <div class="grafico">
+                        <img src="{{ url_for('static', filename='imagens/crescimentoEmrepregados.png') }}" alt="crescimentoEmrepregados"
+                            width="40%">
+                        <figcaption>Crescimento do setor de energias renováveis e aumento de empregos no setor.
+                        </figcaption>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h2>Criação de Empregos e Desenvolvimento Econômico</h2>
-                <p>Lorem Ipsum Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only.</p>
-            </div>
-            <div>
-                <h2>Economia a Longo Prazo</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
-                    aliquid
-                    numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium quisquam
-                    vitae,
-                    soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
-                    dignissimos
-                    numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
-                    veritatis
-                    reiciendis, quia reprehenderit expedita. Ullam.</p>
-                <div class="grafico">
-                    <img src="{{ url_for('static', filename='imagens/crescimentoEmpregados.png') }}" alt="crescimentoEmrepregados"
-                        width="40%">
-                    <figcaption>Crescimento do setor de energias renováveis e aumento de empregos no setor.</figcaption>
-                </div>
-            </div>
-            <div>
-                <h1>Como as Energias Renováveis Impactam o Meio Ambiente</h1>
+        </div>
+        <div>
+            <h1>Como as Energias Renováveis Impactam o Meio Ambiente</h1>
+            <div class="conteudo">
+
                 <h2>Preservação da Biodiversidade</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
                     aliquid
@@ -117,7 +136,7 @@
             </div>
         </div>
 
-        <div class="menuEnergias">
+        <div id="menuEnergias">
             <h1>Tipos de Energias</h1>
 
             <div class="opcoes">
@@ -132,35 +151,35 @@
                 <div class="opcao">
 
                     <h2>Solar</h2>
-                    <a href="#">
+                    <a href="/solar">
                         <img src="{{ url_for('static', filename='imagens/solar.png') }}" alt="Solar">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Eólica</h2>
-                    <a href="#">
+                    <a href="/eolica">
                         <img src="{{ url_for('static', filename='imagens/eolica.png') }}" alt="Eólica">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Biomassa</h2>
-                    <a href="#">
+                    <a href="/biomassa">
                         <img src="{{ url_for('static', filename='imagens/biomassa.png') }}" alt="Biomassa">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Geotérmica</h2>
-                    <a href="#">
+                    <a href="/geotermica">
                         <img src="{{ url_for('static', filename='imagens/geotermica.png') }}" alt="Geotérmica">
                     </a>
                 </div>
                 <div class="opcao">
 
                     <h2>Oceânica</h2>
-                    <a href="#">
+                    <a href="/oceanica">
                         <img src="{{ url_for('static', filename='imagens/oceanica.png') }}" alt="Oceânica">
                     </a>
                 </div>

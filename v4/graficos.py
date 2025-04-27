@@ -82,6 +82,5 @@ def aumentoEconomiaSolar():
 
     # Ajuste de layout para evitar cortes
     plt.tight_layout()
-    plt.show()
     # Salvando a imagem com fundo transparente
     plt.savefig('static/imagens/aumentoEconomiaSolar.png')
