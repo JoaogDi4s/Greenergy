@@ -1,0 +1,36 @@
+.curiosidades{
+    width: 100%;
+}
+.curiosidades li{
+    padding-right: 7rem;
+    margin: 0 5rem;
+}
+.interacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.interacoes a{
+    margin: 10px 0;
+    height: 70px;
+    width: 50rem;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    background-color: #68D391;
+}
+.interacoes a:hover{
+    transform: scale(1.05);
+}
+.opcoes a.ativo{
+    background-color: #2f855a;
+    pointer-events: none;
+    opacity: 0.7;
+}

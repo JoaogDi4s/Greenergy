@@ -18,6 +18,7 @@
     color: #247552;
     justify-self: center;
     padding-bottom: 2rem;
+    margin-top: 3rem;
 }
 
 .tela2 h2 {
@@ -26,7 +27,7 @@
     padding-left: 5rem;
 }
 
-.tela2 p {
+.tela2 p, li {
     color: #247552;
     width: 95%;
     font-size: x-large;
@@ -47,7 +48,7 @@
     height: 100%;
     width: 100%;
     background-color: #247552;
-    margin-top: 45px;
+    margin-top: 3rem;
     padding: 17px;
 }
 .menuEnergias h1{
