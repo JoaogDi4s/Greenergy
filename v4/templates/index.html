@@ -7,7 +7,7 @@
     <!-- Fonte Montserrat -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%" >
+    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%">
 
     <title>Greenergy</title>
 </head>
@@ -42,7 +42,7 @@
         </div>
         <div class="titulo">
             <h1>Greenergy</h1>
-            <p>Powering a sustainable future through innovative renewable energy solutions.</p>
+            <p>Impulsionando um futuro sustentável por meio de soluções inovadoras em energias renováveis</p>
         </div>
     </div>
 
@@ -52,18 +52,16 @@
             Sobre o projeto
         </h1>
         <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
+            O Greenergy é uma plataforma informativa dedicada a promover o conhecimento sobre energias renováveis e sua
+            importância para um futuro sustentável. Nosso objetivo é educar e conscientizar sobre as diversas fontes de
+            energia renovável, como solar, eólica, hídrica e biomassa, destacando suas vantagens, desafios e como elas
+            contribuem para a redução dos impactos ambientais.
+
+            Desenvolvido no contexto da disciplina UPX III da FACENS, o projeto visa reunir informações claras e
+            acessíveis para qualquer pessoa interessada em entender como essas tecnologias funcionam, seu impacto na
+            sociedade e o papel que desempenham no combate às mudanças climáticas. Além disso, o Greenergy oferece
+            gráficos interativos e dados atualizados para uma melhor compreensão do cenário global e local das energias
+            renováveis.
         </p>
     </div>
     <!-- Contato -->
@@ -79,19 +77,7 @@
     <div class="rodape">
         <p>©GREENERGY</p>
     </div>
-    <script>
-        function toggleMenu() {
-            const nav = document.querySelector(".menuNavegação nav");
-            nav.classList.toggle("show");
-        }
-
-        // Fecha o menu ao clicar num link (em mobile)
-        document.querySelectorAll(".menuNavegação nav a").forEach(link => {
-            link.addEventListener("click", () => {
-                document.querySelector(".menuNavegação nav").classList.remove("show");
-            });
-        });
-    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>
