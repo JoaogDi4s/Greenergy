@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%" >
 
     <title>Greenergy</title>
 </head>
@@ -31,7 +32,17 @@
                 <a href="/index#Sobre">Sobre</a>
                 <a href="/index#Contato">Contato</a>
                 <a href="/OqueSao">O que são</a>
-                <a href="/OqueSao#menuEnergias">Energias</a>
+                <div class="dropdown">
+                    <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+                    <div class="dropdown-content">
+                        <a href="/solar">Solar</a>
+                        <a href="/eolica">Eólica</a>
+                        <a href="/hidrica">Hídrica</a>
+                        <a href="/oceanica">Oceânica</a>
+                        <a href="/biomassa">Biomassa</a>
+                        <a href="/geotermica">Geotérmica</a>
+                    </div>
+                </div>
                 <a href="#">Estatísticas</a>
             </nav>
         </div>
@@ -110,9 +121,7 @@
                     </p>
                 </div>
             </div>
-            <hr>
-            <h1>****GRÁFICO*****</h1>
-            <hr>
+
             <h1>Desvantagens</h1>
             <div class="conteudo">
 
@@ -195,9 +204,12 @@
                     </p>
                 </div>
             </div>
-            <hr>
-            <h1>****GRÁFICO*****</h1>
-            <hr>
+            <div class="grafico">
+                <img src="{{ url_for('static', filename='imagens/geracaoEolica.png') }}" alt="crescimentoEmrepregados"
+                    width="40%">
+                <figcaption>Crescimento do setor de energias renováveis e aumento de empregos no setor.
+                </figcaption>
+            </div>
             <h1>Curiosidades</h1>
             <div class="conteudo">
 
@@ -211,7 +223,7 @@
                     </li>
                 </ul>
             </div>
-            <div>
+            <!-- <div>
                 <h1>Veja na prática</h1>
                 <div class="interacoes">
 
@@ -220,7 +232,7 @@
                     <a href="#">Veja aplicações reais</a>
                     <a href="#">Quiz rápido</a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div id="menuEnergias">
@@ -273,6 +285,9 @@
             </div>
 
         </div>
+    </div>
+    <div class="rodape">
+        <p>©GREENERGY</p>
     </div>
 </body>
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
-    
+    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%" >
+
     <title>Greenergy</title>
 </head>
 <style>
-    .tela1{
-        background-image: url("{{ url_for('static', filename='imagens/paisagemSolar.png') }}") ;
+    .tela1 {
+        background-image: url("{{ url_for('static', filename='imagens/paisagemSolar.png') }}");
     }
-  
 </style>
+
 <body>
     <!-- Início -->
     <div class="tela1">
@@ -30,15 +32,25 @@
                 <a href="/index#Sobre">Sobre</a>
                 <a href="/index#Contato">Contato</a>
                 <a href="/OqueSao">O que são</a>
-                <a href="/OqueSao#menuEnergias">Energias</a>
+                <div class="dropdown">
+                    <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+                    <div class="dropdown-content">
+                        <a href="/solar">Solar</a>
+                        <a href="/eolica">Eólica</a>
+                        <a href="/hidrica">Hídrica</a>
+                        <a href="/oceanica">Oceânica</a>
+                        <a href="/biomassa">Biomassa</a>
+                        <a href="/geotermica">Geotérmica</a>
+                    </div>
+                </div>
                 <a href="#">Estatísticas</a>
             </nav>
         </div>
         <div class="titulo">
             <h1>Energia Solar</h1>
             <p>
-                A energia solar é obtida através da luz e do calor do sol, sendo uma das fontes mais 
-                limpas e sustentáveis. Ela pode ser transformada em eletricidade ou usada diretamente 
+                A energia solar é obtida através da luz e do calor do sol, sendo uma das fontes mais
+                limpas e sustentáveis. Ela pode ser transformada em eletricidade ou usada diretamente
                 para aquecer ambientes e líquidos.
             </p>
         </div>
@@ -52,13 +64,17 @@
                     <h2>Fotovoltaica</h2>
                     <p>Converte a luz do sol diretamente em eletricidade.</p>
                     <p>
-                        É o tipo mais comum de energia solar utilizado no mundo atualmente, por ser fácil de instalar, ter baixa manutenção e oferecer uma excelente alternativa de economia na conta de luz. Além disso, pode ser usada tanto em sistemas conectados à rede elétrica (on-grid) quanto em sistemas isolados com baterias (off-grid), ideal para locais remotos
+                        É o tipo mais comum de energia solar utilizado no mundo atualmente, por ser fácil de instalar,
+                        ter baixa manutenção e oferecer uma excelente alternativa de economia na conta de luz. Além
+                        disso, pode ser usada tanto em sistemas conectados à rede elétrica (on-grid) quanto em sistemas
+                        isolados com baterias (off-grid), ideal para locais remotos
                     </p>
                 </div>
                 <div>
                     <h2>Térmica</h2>
                     <p>Usa o calor do sol para aquecer líquidos ou ambientes.</p>
-                    <p>É uma forma muito eficiente e econômica de utilizar o potencial solar, especialmente em países tropicais como o Brasil, onde a incidência solar é alta durante o ano todo.
+                    <p>É uma forma muito eficiente e econômica de utilizar o potencial solar, especialmente em países
+                        tropicais como o Brasil, onde a incidência solar é alta durante o ano todo.
                     </p>
                 </div>
             </div>
@@ -66,87 +82,104 @@
             <div class="conteudo">
                 <div>
                     <h2>Redução da conta de luz</h2>
-                <p>Lorem Ipsum Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only.</p>
+                    <p>Lorem Ipsum Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only.</p>
                 </div>
-            <div>
-                <h2>Fonte limpa e silenciosa</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
-                    aliquid
-                    numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium quisquam
-                    vitae,
-                    soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
-                    dignissimos
-                    numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
-                    veritatis
-                    reiciendis, quia reprehenderit expedita. Ullam.</p>
+
+                <div class="grafico">
+                    <img src="{{ url_for('static', filename='imagens/aumentoEconomiaSolar.png') }}"
+                        alt="crescimentoEmrepregados" width="40%">
+                    <figcaption>Crescimento do setor de energias renováveis e aumento de empregos no setor.
+                    </figcaption>
+                </div>
+
+                <div>
+                    <h2>Fonte limpa e silenciosa</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore
+                        blanditiis
+                        aliquid
+                        numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium
+                        quisquam
+                        vitae,
+                        soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+                        dignissimos
+                        numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
+                        veritatis
+                        reiciendis, quia reprehenderit expedita. Ullam.</p>
+                </div>
+                <div>
+                    <h2>Baixa manutenção</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore
+                        blanditiis
+                        aliquid
+                        numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium
+                        quisquam
+                        vitae.
+                    </p>
+                </div>
+                <div>
+                    <h2>Valorização do imóvel</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
+                        fugiat expedita magnam illo aperiam sunt architecto harum cupiditate
+                        quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus
+                        nemo quidem.
+                    </p>
+                </div>
+                <div>
+                    <h2>Energia descentralizada</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
+                        fugiat expedita magnam illo aperiam sunt architecto harum cupiditate
+                        quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus
+                        nemo quidem.
+                    </p>
+                </div>
             </div>
-            <div>
-                <h2>Baixa manutenção</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
-                    aliquid
-                    numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium quisquam
-                    vitae.
-                </p>
-            </div>
-            <div>
-                <h2>Valorização do imóvel</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
-                    fugiat expedita magnam illo aperiam sunt architecto harum cupiditate 
-                    quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus 
-                    nemo quidem.
-                </p>
-            </div>
-            <div>
-                <h2>Energia descentralizada</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
-                    fugiat expedita magnam illo aperiam sunt architecto harum cupiditate 
-                    quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus 
-                    nemo quidem.
-                </p>
-            </div>
-            </div>
-            <hr>
-            <h1>****GRÁFICO*****</h1>
-            <hr>
             <h1>Desvantagens</h1>
             <div class="conteudo">
 
                 <div>
                     <h2>Custo inicial elevado</h2>
-                <p>Lorem Ipsum Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only.</p>
-            </div>
-            <div>
-                <h2>Geração dependente de luz solar</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
-                    aliquid
-                    numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium quisquam
-                    vitae,
-                    soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
-                    dignissimos
-                    numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
-                    veritatis
-                    reiciendis, quia reprehenderit expedita. Ullam.</p>
+                    <p>Lorem Ipsum Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only.</p>
+                </div>
+                <div>
+                    <h2>Geração dependente de luz solar</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore
+                        blanditiis
+                        aliquid
+                        numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium
+                        quisquam
+                        vitae,
+                        soluta repudiandae eligendi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+                        dignissimos
+                        numquam nisi minus omnis nulla ipsa explicabo molestias placeat unde sequi praesentium fuga ad
+                        veritatis
+                        reiciendis, quia reprehenderit expedita. Ullam.</p>
                 </div>
                 <div>
                     <h2>Necessidade de espaço para instalação</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
-                    aliquid
-                    numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium quisquam
-                    vitae.
-                </p>
-            </div>
-            <div>
-                <h2>Eficiência varia com clima e localização</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
-                    fugiat expedita magnam illo aperiam sunt architecto harum cupiditate 
-                    quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus 
-                    nemo quidem.
-                </p>
-            </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore
+                        blanditiis
+                        aliquid
+                        numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium
+                        quisquam
+                        vitae.
+                    </p>
+                </div>
+                <div>
+                    <h2>Eficiência varia com clima e localização</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
+                        fugiat expedita magnam illo aperiam sunt architecto harum cupiditate
+                        quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus
+                        nemo quidem.
+                    </p>
+                </div>
             </div>
             <h1>Aplicação</h1>
             <div class="conteudo">
@@ -154,39 +187,45 @@
                 <div>
                     <h2>Residências</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
-                    fugiat expedita magnam illo aperiam sunt architecto harum cupiditate 
-                    quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus 
-                    nemo quidem.
-                </p>
+                        fugiat expedita magnam illo aperiam sunt architecto harum cupiditate
+                        quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus
+                        nemo quidem.
+                    </p>
+                </div>
+                <div>
+                    <h2>Empresas e Indústrias</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore
+                        blanditiis
+                        aliquid
+                        numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium
+                        quisquam
+                        vitae.
+                    </p>
+                </div>
+                <div>
+                    <h2>Usinas Solares</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
+                        fugiat expedita magnam illo aperiam sunt architecto harum cupiditate
+                        quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus
+                        nemo quidem.
+                    </p>
+                </div>
+                <div>
+                    <h2>Sistemas off-grid em zonas rurais ou isoladas</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
+                        fugiat expedita magnam illo aperiam sunt architecto harum cupiditate
+                        quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus
+                        nemo quidem.
+                    </p>
+                </div>
             </div>
-            <div>
-                <h2>Empresas e Indústrias</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt delectus libero tempore blanditiis
-                    aliquid
-                    numquam voluptate sed voluptatum, alias veniam assumenda officiis id eveniet praesentium quisquam
-                    vitae.
-                </p>
+
+            <div class="grafico">
+                <img src="{{ url_for('static', filename='imagens/energiaSolarSetor.png') }}" alt="crescimentoEmrepregados"
+                    width="40%">
+                <figcaption>Crescimento do setor de energias renováveis e aumento de empregos no setor.
+                </figcaption>
             </div>
-            <div>
-                <h2>Usinas Solares</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
-                    fugiat expedita magnam illo aperiam sunt architecto harum cupiditate 
-                    quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus 
-                    nemo quidem.
-                </p>
-            </div>
-            <div>
-                <h2>Sistemas off-grid em zonas rurais ou isoladas</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
-                    fugiat expedita magnam illo aperiam sunt architecto harum cupiditate 
-                    quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus 
-                    nemo quidem.
-                </p>
-            </div>
-            </div>
-            <hr>
-            <h1>****GRÁFICO*****</h1>
-            <hr>
             <h1>Curiosidades</h1>
             <div class="conteudo">
 
@@ -200,16 +239,16 @@
                     </li>
                 </ul>
             </div>
-            <div>
-             <h1>Veja na prática</h1>   
+            <!-- <div>
+                <h1>Veja na prática</h1>
                 <div class="interacoes">
 
-                 <a href="#">Compare com outras energias</a>
-                 <a href="#">Simule sua Economia</a>
-                 <a href="#">Veja aplicações reais</a>
-                 <a href="#">Quiz rápido</a>
+                    <a href="#">Compare com outras energias</a>
+                    <a href="#">Simule sua Economia</a>
+                    <a href="#">Veja aplicações reais</a>
+                    <a href="#">Quiz rápido</a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div id="menuEnergias">
@@ -263,5 +302,9 @@
 
         </div>
     </div>
+    <div class="rodape">
+        <p>©GREENERGY</p>
+    </div>
 </body>
+
 </html>

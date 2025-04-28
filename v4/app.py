@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+from scipy.interpolate import splrep, splev
+import numpy as np
 import graficos
 import os
 
@@ -21,27 +23,34 @@ def imagens(filename):
 
 @app.route('/hidrica')
 def hidrica():
+    graficos.energiaHidreletrica()
+    graficos.setorEnergiaHidrica()
     return render_template('hidrica.html')
 
 @app.route('/solar')
 def solar():
     graficos.aumentoEconomiaSolar()
+    graficos.energiaSolarSetor()
     return render_template('solar.html')
 
 @app.route('/eolica')
 def eolica():
+    graficos.geracaoEolica()
     return render_template('eolica.html')
 
 @app.route('/biomassa')
 def biomassa():
+    graficos.geracaoBiomassa()
     return render_template('biomassa.html')
 
 @app.route('/geotermica')
 def geotermica():
+    graficos.geracaoGeotermica()
     return render_template('geotermica.html')
 
 @app.route('/oceanica')
 def oceanica():
+    graficos.geracaoOceanica()
     return render_template('oceanica.html')
 
 if __name__ == '__main__':

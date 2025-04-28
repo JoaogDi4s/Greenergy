@@ -44,21 +44,61 @@ html {
 nav {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
+/* mantém seu estilo dos links */
 nav a {
     color: white;
     text-decoration: none;
     margin-left: 2rem;
-    font-weight: 500;
-    font-size: 1.2rem;
     font-weight: 600;
+    font-size: 1.2rem;
     transition: color 0.3s;
 }
 
 nav a:focus,
 nav a:hover {
     color: #A0EAC0;
+}
+
+/* estilo para o dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* abaixo do botão */
+    left: 0;
+    background-color: #1e5c41; /* fundo do dropdown */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px #153f2d;
+    z-index: 1000;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+/* links dentro do dropdown */
+.dropdown-content a {
+    padding: 10px 20px;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+/* hover no dropdown */
+.dropdown-content a:hover {
+    background-color: #153f2d;
+    color: #A0EAC0;
+}
+
+/* quando passa o mouse sobre o botão, aparece o menu */
+.dropdown:hover .dropdown-content {
+    display: flex;
 }
 
 .titulo {
@@ -91,6 +131,7 @@ nav a:hover {
     box-shadow: inset 0 0 30px rgba(67, 67, 67, 0.8);
     height: auto;
     padding: 2rem 0;
+    padding-bottom: 0;
 }
 
 .tela2 h1 {
@@ -189,6 +230,13 @@ nav a:hover {
     user-select: none;
 }
 
+.rodape{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4e4e4;
+}
 /* Telas menores que 768px (celulares) */
 @media (max-width: 768px) {
     nav {
