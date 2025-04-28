@@ -166,7 +166,7 @@ def setorEnergiaHidrica():
     )
 
     # Centraliza o título e aumenta a fonte
-    plt.title('Distribuição da Matriz Energética', fontsize=18, fontweight='bold', color='#247552')
+    plt.title('Distribuição da Energia Hídrica por setor', fontsize=18, fontweight='bold', color='#247552')
 
     # Remove o círculo central para visual mais limpo
     plt.setp(autotexts, size=15, weight="bold", color="#247552")
