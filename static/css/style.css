@@ -20,6 +20,18 @@ html {
     flex-direction: column;
 }
 
+.tela1 a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.tela1 a:focus,
+.tela1 a:hover {
+    color: #A0EAC0;
+}
+
 .menuNavegação {
     background-color: #247552;
     width: 95%;
