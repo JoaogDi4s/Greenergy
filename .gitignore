@@ -14,7 +14,6 @@ dist/
 *.egg-info/
 pip-log.txt
 
-
 # =======================
 # NODE.JS / FRONTEND
 # =======================
@@ -25,13 +24,11 @@ yarn-error.log*
 package-lock.json
 # (opcional, só ignore package-lock.json se você NÃO quiser travar dependências)
 
-
 # =======================
 # SISTEMAS OPERACIONAIS
 # =======================
 .DS_Store
 Thumbs.db
-
 
 # =======================
 # IDEs E EDITORES
@@ -41,7 +38,6 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
-
 # =======================
 # LOGS E TEMPORÁRIOS
 # =======================
@@ -49,7 +45,6 @@ Thumbs.db
 *.tmp
 *.swp
 *.bak
-
 
 # =======================
 # ARQUIVOS DE COMPILAÇÃO WEB (opcional)
@@ -59,9 +54,8 @@ Thumbs.db
 /out/
 *.map
 
-
 # =======================
 # ARQUIVOS PESSOAIS E DE BACKUP
 # =======================
 *.~*
-*~ 
+*~

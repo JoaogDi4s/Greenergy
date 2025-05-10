@@ -12,31 +12,19 @@ Bem-vindo ao Greenergy, um site informativo dedicado às energias renováveis! N
 🛠 Como usar
 
 Instalar o Flask
+
     pip install Flask
 
 Verificação da Instalação do Flask
+
     python -m flask --version
 
 Instalar o Matplotlib
+
     pip install matplotlib
 
 Verificação da Instalação do Matplotlib
 Para garantir que o Matplotlib foi instalado corretamente, execute o seguinte código Python:
-    import matplotlib
-    print(matplotlib.__version__)
 
-🛠 Como usar
-
-Instalar o Flask
-    pip install Flask
-
-Verificação da Instalação do Flask
-    python -m flask --version
-
-Instalar o Matplotlib
-    pip install matplotlib
-
-Verificação da Instalação do Matplotlib
-Para garantir que o Matplotlib foi instalado corretamente, execute o seguinte código Python:
     import matplotlib
     print(matplotlib.__version__)
