@@ -15,7 +15,7 @@ Instalar o Flask
 
     pip install Flask
 
-Verificação da Instalação do Flask
+Verificação da Instalação do 
 
     python -m flask --version
 
