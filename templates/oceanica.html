@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%">
+
+    <title>Greenergy</title>
+</head>
+<style>
+    .tela1 {
+        background-image: url("{{ url_for('static', filename='imagens/paisagemOceanica.png') }}");
+    }
+</style>
+
+<body>
+    <!-- Início -->
+    <div class="tela1">
+        <!-- Menu navegação -->
+        <div class="menuNavegação">
+            <!-- Título -->
+            <h1>Greenergy</h1>
+            <!-- Ícone do menu hamburguer -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- Navegação -->
+            <nav>
+                <a href="/index#Sobre">Sobre</a>
+                <a href="/index#Contato">Contato</a>
+                <a href="/OqueSao">O que são</a>
+                <div class="dropdown">
+                    <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+                    <div class="dropdown-content">
+                        <a href="/solar">Solar</a>
+                        <a href="/eolica">Eólica</a>
+                        <a href="/hidrica">Hídrica</a>
+                        <a href="/oceanica">Oceânica</a>
+                        <a href="/biomassa">Biomassa</a>
+                        <a href="/geotermica">Geotérmica</a>
+                    </div>
+                </div>
+                <a href="#">Estatísticas</a>
+            </nav>
+        </div>
+        <div class="tituloEnergias">
+            <h1>Energia Oceânica</h1>
+            <p>
+                A energia oceânica é gerada a partir dos movimentos e características das águas do oceano, como as
+                marés, as ondas, as correntes marinhas e até a diferença de temperatura entre a superfície e as
+                profundezas. É uma fonte promissora, limpa e ainda em expansão.
+            </p>
+        </div>
+    </div>
+
+    <div class="tela2">
+        <div>
+            <h1>Tipos</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Maremotriz</h2>
+                    <p>
+                        Aproveita o movimento das marés (subida e descida do nível do mar) para gerar eletricidade.
+                    </p>
+                    <p>Como funciona: Barragens ou turbinas subaquáticas captam o fluxo das marés.</p>
+                </div>
+                <div>
+                    <h2>Ondomotriz</h2>
+                    <p>
+                        Converte o movimento das ondas do mar em energia elétrica.
+                    </p>
+                    <p>Tecnologias:
+                    <ul>
+                        <li>Dispositivos flutuantes (como boias que sobem/descem com as ondas);</li>
+                        <li>Colunas de oscilação (ar comprimido por ondas move turbinas).</li>
+                    </ul>
+                    </p>
+
+                </div>
+                <div>
+                    <h2>Térmica oceânica (OTEC)</h2>
+                    <p>
+                        Usa a diferença de temperatura entre águas superficiais (quentes) e profundas (friass) para
+                        gerar energia.
+                    </p>
+                    <p>Como funciona:
+                    <ul>
+                        <li>Água superficial (25–30°C) vaporiza um fluido de baixo ponto de ebulição (como amônia);</li>
+                        <li>O vapor move uma turbina;</li>
+                        <li>Água fria das profundidades (5°C) condensa o vapor, reiniciando o ciclo.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <h1>Vantagens</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Fonte renovável e constante</h2>
+                    <p>
+                        A energia oceânica é infinita e previsível: marés seguem ciclos naturais, ondas são contínuas e
+                        a OTEC funciona 24h. Diferente de solar/eólica, não depende do clima. Exemplo: La Rance (França)
+                        opera desde 1966 sem falhas.
+                    </p>
+                </div>
+                <div>
+                    <h2>Baixa emissão de poluentes</h2>
+                    <p>
+                        Zero CO₂ durante a geração! Maremotriz e ondomotriz não queimam combustíveis, e a OTEC emite
+                        menos que usinas solares. Cada MWh evita 1 tonelada de CO₂ vs. carvão.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>Aproveitamento do espaço marítimo</h2>
+                    <p>
+                        Usa áreas oceânicas sem ocupar terra. Turbinas submersas não atrapalham pesca ou navegação, e
+                        OTEC ainda pode dessalinizar água. Solução ideal para ilhas e cidades costeiras.
+                    </p>
+                </div>
+                <div>
+                    <h2>Potencial global enorme</h2>
+                    <p>
+                        Ondas sozinhas poderiam suprir 2x a demanda mundial de energia. Só no Brasil, o litoral tem
+                        potencial para 87 GW (equivalente a 6 Belo Montes). Futuro energético está no mar!
+                    </p>
+                </div>
+            </div>
+
+            <h1>Desvantagens</h1>
+            <div class="conteudo">
+                <div>
+                    <h2>Tecnologia ainda cara</h2>
+                    <p>
+                        Os custos iniciais são altos: instalação de turbinas submersas ou sistemas OTEC pode custar 3x
+                        mais que eólica terrestre. Governos precisam de subsídios para viabilizar projetos. Exemplo:
+                        usina de ondas em Portugal teve investimento de €8,5 milhões/MW.
+                    </p>
+                </div>
+                <div>
+                    <h2>Desafios técnicos e manutenção</h2>
+                    <p>
+                        Equipamentos sofrem corrosão pela água salgada e exigem reparos complexos em alto mar. Falhas
+                        são frequentes - 25% dos projetos de energia das ondas falham nos primeiros 5 anos. Manutenção
+                        pode custar 20% do investimento inicial/ano.
+                    </p>
+                </div>
+                <div>
+                    <h2>Impacto na vida marinha</h2>
+                    <p>
+                        Turbinas alteram ecossistemas: barulho assusta peixes e hélices podem ferir animais marinhos.
+                        Estudos mostram redução de 15% na biodiversidade ao redor de usinas maremotrizes. OTEC ainda
+                        ameaça plâncton ao bombear água fria das profundezas.
+                    </p>
+                </div>
+                <div>
+                    <h2>Disponibilidade regional</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
+                        fugiat expedita magnam illo aperiam sunt architecto harum cupiditate
+                        quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus
+                        nemo quidem.
+                    </p>
+                </div>
+            </div>
+            <h1>Aplicação</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Usinas de marés (energia maremotriz)</h2>
+                    <p>
+                        Usam barragens ou turbinas subaquáticas para captar o movimento das marés e gerar eletricidade.
+                    </p>
+                    <p>Exemplo: Usina de La Rance (França), operando desde 1966, gera 240 GWh/ano.</p>
+                    <p>Melhor uso: Regiões com amplitude de maré >5m (ex.: Canadá, Reino Unido).</p>
+                </div>
+            </div>
+            <div>
+                <h2>Conversores de ondas (energia das ondas)</h2>
+                <p>
+                    Dispositivos flutuantes ou costeiros que transformam o vai-e-vem das ondas em energia.
+                </p>
+                <p>Tecnologias: Boias oscilantes (como o WaveRoller em Portugal) ou colunas de água.</p>
+                <p>Vantagem: Potencial em todo litoral, especialmente onde as ondas são fortes (ex.: Sul do Brasil).</p>
+            </div>
+            <div>
+                <h2>Energia térmica oceânica (OTEC)</h2>
+                <p>
+                    Aproveita a diferença de temperatura entre águas superficiais (quentes) e profundas (friass) para
+                    gerar energia.
+                </p>
+                <p>Funcionamento: Usa um fluido termodinâmico (como amônia) em um ciclo fechado.</p>
+                <p>Aplicação: Países tropicais (ex.: Havaí e Japão já testam usinas piloto).</p>
+            </div>
+            <div>
+                <h2>Energia das correntes marinhas</h2>
+                <p>
+                    Turbinas subaquáticas captam a energia de correntes oceânicas constantes (como a Corrente do Golfo).
+                </p>
+                <p>Vantagem: Fluxo previsível e contínuo, sem impacto visual.</p>
+                <p>Desafio: Instalação em águas profundas exige tecnologia avançada.</p>
+            </div>
+        </div>
+        <div class="grafico">
+            <img src="{{ url_for('static', filename='imagens/geracaoOceanica.png') }}" alt="crescimentoEmrepregados"
+                width="40%">
+            <figcaption>Geração de energia Oceânica por região.
+            </figcaption>
+        </div>
+        <h1>Curiosidades</h1>
+        <div class="conteudo">
+
+            <ul class="listaCuriosidades">
+                <li>A França possui uma das primeiras usinas maremotrizes do mundo: La Rance.
+                </li>
+                <li>A energia das ondas pode gerar mais de 80 mil TWh por ano no mundo.
+                </li>
+                <li>
+                    No Brasil, o projeto pioneiro no Ceará testa geração de energia pelas ondas.
+                </li>
+            </ul>
+        </div>
+        <!-- <div>
+                <h1>Veja na prática</h1>
+                <div class="interacoes">
+
+                    <a href="#">Compare com outras energias</a>
+                    <a href="#">Simule sua Economia</a>
+                    <a href="#">Veja aplicações reais</a>
+                    <a href="#">Quiz rápido</a>
+                </div>
+            </div> -->
+    </div>
+
+    <div id="menuEnergias">
+        <h1>Tipos de Energias</h1>
+
+        <div class="opcoes">
+
+            <div class="opcao">
+
+                <h2>Hídrica</h2>
+                <a href="/hidrica">
+                    <img src="{{ url_for('static', filename='imagens/hidrica.png') }}" alt="Hídrica">
+                </a>
+            </div>
+            <div class="opcao">
+
+                <h2>Solar</h2>
+                <a href="/solar">
+                    <img src="{{ url_for('static', filename='imagens/solar.png') }}" alt="Solar">
+                </a>
+            </div>
+            <div class="opcao">
+
+                <h2>Eólica</h2>
+                <a href="/eolica">
+                    <img src="{{ url_for('static', filename='imagens/eolica.png') }}" alt="Eólica">
+                </a>
+            </div>
+            <div class="opcao">
+
+                <h2>Biomassa</h2>
+                <a href="/biomassa">
+                    <img src="{{ url_for('static', filename='imagens/biomassa.png') }}" alt="Biomassa">
+                </a>
+            </div>
+            <div class="opcao">
+
+                <h2>Geotérmica</h2>
+                <a href="/geotermica">
+                    <img src="{{ url_for('static', filename='imagens/geotermica.png') }}" alt="Geotérmica">
+                </a>
+            </div>
+            <div class="opcao">
+
+                <h2>Oceânica</h2>
+                <a href="/oceanica">
+                    <img src="{{ url_for('static', filename='imagens/oceanica.png') }}" alt="Oceânica">
+                </a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="rodape">
+        <p>©GREENERGY</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

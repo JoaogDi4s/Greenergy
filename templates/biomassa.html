@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%">
+
+    <title>Greenergy</title>
+</head>
+<style>
+    .tela1 {
+        background-image: url("{{ url_for('static', filename='imagens/paisagemBiomassa.png') }}");
+    }
+</style>
+
+<body>
+    <!-- Início -->
+    <div class="tela1">
+        <!-- Menu navegação -->
+        <div class="menuNavegação">
+            <!-- Título -->
+            <h1>Greenergy</h1>
+            <!-- Ícone do menu hamburguer -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- Navegação -->
+            <nav>
+                <a href="/index#Sobre">Sobre</a>
+                <a href="/index#Contato">Contato</a>
+                <a href="/OqueSao">O que são</a>
+                <div class="dropdown">
+                    <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+                    <div class="dropdown-content">
+                        <a href="/solar">Solar</a>
+                        <a href="/eolica">Eólica</a>
+                        <a href="/hidrica">Hídrica</a>
+                        <a href="/oceanica">Oceânica</a>
+                        <a href="/biomassa">Biomassa</a>
+                        <a href="/geotermica">Geotérmica</a>
+                    </div>
+                </div>
+                <a href="#">Estatísticas</a>
+            </nav>
+        </div>
+        <div class="tituloEnergias">
+            <h1>Biomassa</h1>
+            <p>
+                A energia de biomassa é gerada a partir de matéria orgânica como restos vegetais, resíduos agrícolas,
+                madeira e até lixo orgânico. Quando esses materiais são queimados ou transformados, liberam energia que
+                pode ser usada para gerar eletricidade ou calor.
+            </p>
+        </div>
+    </div>
+
+    <div class="tela2">
+        <div>
+            <h1>Tipos</h1>
+            <div class="conteudo">
+                <div>
+                    <h2>Biomassa sólida</h2>
+                    <p>Combustíveis tradicionais de origem vegetal ou animal, usados diretamente na queima.</p>
+                    <p>Exemplos: Lenha, carvão vegetal, bagaço de cana, casca de arroz, resíduos florestais.</p>
+                </div>
+                <div>
+                    <h2>Biogás</h2>
+                    <p>Gás combustível gerado pela decomposição anaeróbica de matéria orgânica.</p>
+                    <p>Usos: Geração de eletricidade, combustível para veículos (biometano), aquecimento.</p>
+
+                </div>
+                <div>
+                    <h2>Biocombustíveis líquidos</h2>
+                    <p>
+                        Combustíveis renováveis processados para uso em motores e turbinas.
+                    </p>
+                    <p>Biodiesel: Derivado de óleos vegetais (soja, palma) ou gordura animal. Misturado ao diesel fóssil
+                        (B10 no Brasil).</p>
+                </div>
+            </div>
+
+            <div class="grafico">
+                <img src="{{ url_for('static', filename='imagens/geracaoBiomassa.png') }}" alt="crescimentoEmrepregados"
+                    width="40%">
+                <figcaption>Participação do insumo energético na geração elétrica (mil tep) – 2018.
+                </figcaption>
+            </div>
+
+            <h1>Vantagens</h1>
+            <div class="conteudo">
+                <div>
+                    <h2>Reaproveitamento de resíduos</h2>
+                    <p>
+                        A biomassa transforma subprodutos agrícolas, florestais e urbanos em energia, reduzindo
+                        desperdícios e passivos ambientais. Exemplos:
+                    </p>
+                    <p>Exemplos: Bagaço de cana, Esterco animal e Restos de madeira</p>
+                </div>
+                <div>
+                    <h2>Menor emissão de poluentes</h2>
+                    <p>
+                        Embora libere CO₂ quando queimada, a biomassa é neutra em carbono: as plantas absorvem o gás
+                        durante o crescimento, compensando as emissões. Comparada a combustíveis fósseis, emite:
+                        50% menos enxofre (SO₂); 30% menos material particulado; Zero metano (se tratada corretamente).
+                    </p>
+                </div>
+                <div>
+                    <h2>Geração descentralizada</h2>
+                    <p>
+                        Pode ser produzida localmente, sem depender de grandes infraestruturas:
+                    <ul>
+                        <li>Biogás em fazendas: Dejetos de suínos viram energia para propriedades rurais;</li>
+                        <li>Cascas de arroz em indústrias: Abastecem caldeiras no interior do RS;</li>
+                        <li>Biodiesel em comunidades: Óleo de cozinha usado vira combustível para tratores.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <h1>Desvantagens</h1>
+            <div class="conteudo">
+                <div>
+                    <h2>Emissões de CO₂</h2>
+                    <p>
+                        Embora seja considerada renovável, a queima de biomassa ainda libera dióxido de carbono (CO₂) e
+                        outros poluentes, como material particulado. Apesar do argumento da neutralidade carbônica (já
+                        que as plantas absorvem CO₂ durante o crescimento).
+                    </p>
+                </div>
+                <div>
+                    <h2>Necessidade de grande área</h2>
+                    <p>
+                        A produção de biomassa em escala energética demanda vastas extensões de terra para cultivo ou
+                        coleta de matéria-prima:
+                    <ul>
+                        <li>Cana-de-açúcar, eucalipto e outras culturas energéticas competem com espaço para alimentos
+                            ou preservação;</li>
+                        <li>Logística complexa: Transportar resíduos florestais ou agrícolas até usinas pode ser caro e
+                            inviável em regiões distantes.
+
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div>
+                    <h2>Concorrência com produção de alimentos</h2>
+                    <p>
+                        O uso de terras férteis para cultivos energéticos (como milho para etanol ou soja para
+                        biodiesel) pode elevar o preço de alimentos básicos (efeito indireto no custo da cesta básica);
+                        ameaçar segurança alimentar em regiões com escassez de terras agricultáveis; estimular
+                        desmatamento para expandir áreas de plantio.
+                    </p>
+                </div>
+            </div>
+            <h1>Aplicação</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Usinas termoelétricas</h2>
+                    <p>
+                        A biomassa sólida (como bagaço de cana, casca de arroz e resíduos florestais) é queimada em
+                        caldeiras para gerar vapor e acionar turbinas, produzindo eletricidade em larga escala.
+                    </p>
+                </div>
+                <div>
+                    <h2>Aquecimento e geração local</h2>
+                    <p>
+                        Biomassa é usada diretamente para produção de calor em indústrias, residências rurais e pequenas
+                        comunidades:
+                    <ul>
+                        <li>Caldeiras industriais: Queima de cavacos de madeira ou cascas para processos térmicos;</li>
+                        <li>Fornos de cerâmica e olarias: Uso de lenha sustentável (reflorestada);</li>
+                        <li>Aquecimento doméstico: Lareiras e fogões a pellets (peletização de resíduos agrícolas).</li>
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <h2>Produção de biocombustíveis</h2>
+                    <p>
+                        Biomassa é transformada em combustíveis líquidos ou gasosos para transporte e indústria:
+                        Etanol, Biodiesel e Biogás/Biometano.
+                    </p>
+                    <p>Impacto brasileiro:
+                        O país é o 2º maior produtor mundial de etanol, com 27 bilhões de litros/ano, e avança na
+                        produção de biometano para substituir o diesel de caminhões.</p>
+                </div>
+            </div>
+
+            <h1>Curiosidades</h1>
+            <div class="conteudo">
+
+                <ul class="listaCuriosidades">
+                    <li>O Brasil é um dos líderes mundiais na produção de etanol de cana-de-açúcar.
+                    </li>
+                    <li>Em algumas cidades, o lixo orgânico é transformado em energia elétrica.
+                    </li>
+                    <li>
+                        A biomassa responde por cerca de 9% da matriz energética brasileira.
+                    </li>
+                </ul>
+            </div>
+            <!-- <div>
+                <h1>Veja na prática</h1>
+                <div class="interacoes">
+
+                    <a href="#">Compare com outras energias</a>
+                    <a href="#">Simule sua Economia</a>
+                    <a href="#">Veja aplicações reais</a>
+                    <a href="#">Quiz rápido</a>
+                </div>
+            </div> -->
+        </div>
+
+        <div id="menuEnergias">
+            <h1>Tipos de Energias</h1>
+
+            <div class="opcoes">
+
+                <div class="opcao">
+
+                    <h2>Hídrica</h2>
+                    <a href="/hidrica">
+                        <img src="{{ url_for('static', filename='imagens/hidrica.png') }}" alt="Hídrica">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Solar</h2>
+                    <a href="/solar">
+                        <img src="{{ url_for('static', filename='imagens/solar.png') }}" alt="Solar">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Eólica</h2>
+                    <a href="/eolica">
+                        <img src="{{ url_for('static', filename='imagens/eolica.png') }}" alt="Eólica">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Biomassa</h2>
+                    <a href="/biomassa">
+                        <img src="{{ url_for('static', filename='imagens/biomassa.png') }}" alt="Biomassa">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Geotérmica</h2>
+                    <a href="/geotermica">
+                        <img src="{{ url_for('static', filename='imagens/geotermica.png') }}" alt="Geotérmica">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Oceânica</h2>
+                    <a href="/oceanica">
+                        <img src="{{ url_for('static', filename='imagens/oceanica.png') }}" alt="Oceânica">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="rodape">
+        <p>©GREENERGY</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
