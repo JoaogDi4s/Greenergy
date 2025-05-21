@@ -1,0 +1,58 @@
+.tela1 {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+
+.tela1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 80% escuro */
+  z-index: -1; /* atrás do conteúdo */
+}
+
+.conteudo {
+  margin: 5rem;
+}
+
+.listaCuriosidades {
+  width: 100%;
+}
+.listaCuriosidades li {
+  padding-right: 7rem;
+  margin: 0 5rem;
+}
+.interacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.interacoes a {
+  margin: 10px 0;
+  height: 70px;
+  width: 50rem;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background-color: #68d391;
+}
+.interacoes a:hover {
+  transform: scale(1.05);
+}
+.opcoes a.ativo {
+  background-color: #2f855a;
+  pointer-events: none;
+  opacity: 0.7;
+}

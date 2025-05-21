@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%" >
+
+    <title>Greenergy</title>
+</head>
+<style>
+    .tela1 {
+        background-image: url("{{ url_for('static', filename='imagens/paisagem/paisagemSolar.jpg') }}");
+    }
+</style>
+
+<body>
+    <!-- Início -->
+    <div class="tela1">
+        <!-- Menu navegação -->
+        <div class="menuNavegação">
+            <!-- Título -->
+            <h1>Greenergy</h1>
+            <!-- Ícone do menu hamburguer -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- Navegação -->
+            <nav>
+                <a href="/index#Sobre">Sobre</a>
+                <a href="/index#Contato">Contato</a>
+                <a href="/OqueSao">O que são</a>
+                <div class="dropdown">
+                    <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+                    <div class="dropdown-content">
+                        <a href="/solar">Solar</a>
+                        <a href="/eolica">Eólica</a>
+                        <a href="/hidrica">Hídrica</a>
+                        <a href="/oceanica">Oceânica</a>
+                        <a href="/biomassa">Biomassa</a>
+                        <a href="/geotermica">Geotérmica</a>
+                    </div>
+                </div>
+                <a href="#">Estatísticas</a>
+            </nav>
+        </div>
+        <div class="titulo">
+            <h1>Energia Solar</h1>
+            <p>
+                A energia solar é obtida através da luz e do calor do sol, sendo uma das fontes mais
+                limpas e sustentáveis. Ela pode ser transformada em eletricidade ou usada diretamente
+                para aquecer ambientes e líquidos.
+            </p>
+        </div>
+    </div>
+
+    <div class="tela2">
+        <div>
+            <h1>Tipos</h1>
+            <div class="conteudo">
+                <div>
+                    <h2>Fotovoltaica</h2>
+                    <p>Converte a luz do sol diretamente em eletricidade.</p>
+                    <p>
+                        É o tipo mais comum de energia solar utilizado no mundo atualmente, por ser fácil de instalar, ter baixa manutenção e oferecer uma excelente alternativa de economia na conta de luz. Além disso, pode ser usada tanto em sistemas conectados à rede elétrica (on-grid) quanto em sistemas isolados com baterias (off-grid), ideal para locais remotos
+                    </p>
+                </div>
+                <div>
+                    <h2>Térmica</h2>
+                    <p>Usa o calor do sol para aquecer líquidos ou ambientes.</p>
+                    <p>É uma forma muito eficiente e econômica de utilizar o potencial solar, especialmente em países
+                        tropicais como o Brasil, onde a incidência solar é alta durante o ano todo.
+                    </p>
+                </div>
+            </div>
+            <h1>Vantagens</h1>
+            <div class="conteudo">
+                <div>
+                    <h2>Redução da conta de luz</h2>
+                    <p>
+                        A energia solar corta drasticamente os gastos com eletricidade. Painéis fotovoltaicos geram energia grátis do sol, reduzindo a dependência da rede elétrica. Em alguns casos, o excedente pode até gerar créditos na conta de luz.
+                    </p>
+                </div>
+
+                <div class="grafico">
+                    <img src="{{ url_for('static', filename='imagens/aumentoEconomiaSolar.png') }}"
+                        alt="crescimentoEmrepregados" width="40%">
+                    <figcaption>Economia acumulada com placas solares
+                    </figcaption>
+                </div>
+
+                <div>
+                    <h2>Fonte limpa e silenciosa</h2>
+                    <p>
+                        Diferente de geradores poluentes, a solar não emite gases nem faz barulho. É perfeita para cidades e áreas naturais, pois não agride o ar nem perturba animais e vizinhos.
+                    </p>
+                </div>
+                <div>
+                    <h2>Baixa manutenção</h2>
+                    <p>
+                        Painéis solares quase não exigem cuidados. Só precisam de limpeza ocasional e duram mais de 25 anos. Sem peças móveis, quebram menos que outros sistemas de energia.
+                    </p>
+                </div>
+            </div>
+            <h1>Desvantagens</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Custo inicial elevado</h2>
+                    <p>
+                        Embora a energia solar traga economia a longo prazo, o investimento inicial ainda é uma barreira para muitos consumidores.
+                        <ul>
+                            <li>Retorno a longo prazo: O payback (tempo para o investimento se pagar) varia de 4 a 8 anos, dependendo do consumo e tarifas locais.</li>
+                            <li>Baterias caras: Sistemas off-grid (isolados) exigem armazenamento, que pode dobrar o custo total.</li>
+                            <li>Investimento alto: A compra e instalação de painéis solares e inversores ainda têm preço elevado, apesar da queda nos últimos anos.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    <h2>Geração dependente de luz solar</h2>
+                    <p>
+                        Apesar da economia a longo prazo, o investimento inicial em painéis e instalação ainda é alto (R$ 15-30 mil para residências). Baterias para armazenamento podem dobrar o custo total. O retorno leva 4-8 anos.
+                        <ul>
+                            <li>Não funciona à noite: Requer baterias ou conexão à rede para períodos sem sol.</li>
+                            <li>Variação ao longo do dia: Produção máxima ocorre apenas no horário de pico de sol (geralmente meio-dia).</li>
+                            <li>Inviável em locais pouco ensolarados: Regiões com muitos dias nublados ou chuvosos têm menor eficiência.</li>
+
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    <h2>Necessidade de espaço para instalação</h2>
+                    <p> Um dos desafios práticos da energia solar é a área necessária para sua implementação eficiente.
+                        <ul>
+                            <li>Telhados limitados: Casas pequenas ou com telhados inadequados podem não ter área suficiente.</li>
+                            <li>Grandes projetos exigem terrenos: Usinas solares ocupam muito espaço (cerca de 1 hectare por 1 MW).</li>
+                            <li>Restrições urbanas: Condomínios e cidades históricas podem ter regras que impedem a instalação.</li>
+
+                        </ul>
+                </p>
+                </div>
+                <div>
+                    <h2>Eficiência varia com clima e localização</h2>
+                    <p>
+                        <ul>
+                            <li>Desempenho reduzido no calor extremo: Painéis perdem eficiência em temperaturas muito altas.</li>
+                            <li>Diferenças regionais: Nordeste brasileiro tem melhor irradiação que o Sul.</li>
+                            <li>Sujeira e sombreamento: Poeira, folhas ou sombras de prédios diminuem a produção.</li>
+
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <h1>Aplicação</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Residências</h2>
+                    <p>
+                        A energia solar em casas e apartamentos reduz a conta de luz em até 95%. Os painéis são instalados no telhado e conectados à rede elétrica, permitindo que o excedente vire créditos na conta. É ideal para quem quer economia a longo prazo e menor dependência das concessionárias.
+                </p>
+                </div>
+                <div>
+                    <h2>Empresas e Indústrias</h2>
+                    <p>
+                        Comércios e fábricas usam sistemas solares para cortar custos operacionais, especialmente em horário comercial (quando o sol está mais forte). Grandes telhados de armazéns e galpões são perfeitos para instalações maiores, e empresas podem se beneficiar de incentivos fiscais verdes.
+                    </p>
+                </div>
+                <div>
+                    <h2>Usinas Solares</h2>
+                    <p>
+                        Parques solares geram energia em larga escala para distribuição na rede elétrica. Podem ser instalados em terrenos abertos ou flutuantes (em lagos e represas). No Brasil, estados como Bahia e Minas Gerais lideram em usinas solares, ajudando a diversificar a matriz energética nacional.
+                    </p>
+                </div>
+                <div>
+                    <h2>Sistemas off-grid em zonas rurais ou isoladas</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero accusamus
+                        fugiat expedita magnam illo aperiam sunt architecto harum cupiditate
+                        quas consectetur, rem eos nulla ad consequatur ipsam, necessitatibus
+                        nemo quidem.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grafico">
+                <img src="{{ url_for('static', filename='imagens/energiaSolarSetor.png') }}" alt="crescimentoEmrepregados"
+                    width="40%">
+                <figcaption>Uso de placas solares por setor.
+                </figcaption>
+            </div>
+            <h1>Curiosidades</h1>
+            <div class="conteudo">
+
+                <ul class="listaCuriosidades">
+                    <li>O Brasil é um dos países com maior potencial solar do mundo.
+                    </li>
+                    <li>Em 2023, mais de 2 milhões de residências já usavam energia solar no Brasil.
+                    </li>
+                    <li>
+                        A energia do Sol que atinge a Terra em 1 hora seria suficiente para abastecer o mundo por 1 ano
+                    </li>
+                </ul>
+            </div>
+            <!-- <div>
+                <h1>Veja na prática</h1>
+                <div class="interacoes">
+                    <a href="#">Compare com outras energias</a>
+                    <a href="#">Simule sua Economia</a>
+                    <a href="#">Veja aplicações reais</a>
+                    <a href="#">Quiz rápido</a>
+                </div>
+            </div> -->
+        </div>
+
+        <div id="menuEnergias">
+                <h1>Tipos de Energias</h1>
+
+                <div class="opcoes">
+
+                    <div class="opcao">
+
+                        <h2>Hídrica</h2>
+                        <a href="/hidrica">
+                            <img src="{{ url_for('static', filename='imagens/energias/hidrica.png') }}" alt="Hídrica">
+                        </a>
+                    </div>
+                    <div class="opcao">
+
+                        <h2>Solar</h2>
+                        <a href="/solar">
+                            <img src="{{ url_for('static', filename='imagens/energias/solar.png') }}" alt="Solar">
+                        </a>
+                    </div>
+                    <div class="opcao">
+
+                        <h2>Eólica</h2>
+                        <a href="/eolica">
+                            <img src="{{ url_for('static', filename='imagens/energias/eolica.png') }}" alt="Eólica">
+                        </a>
+                    </div>
+                    <div class="opcao">
+
+                        <h2>Biomassa</h2>
+                        <a href="/biomassa">
+                            <img src="{{ url_for('static', filename='imagens/energias/biomassa.png') }}" alt="Biomassa">
+                        </a>
+                    </div>
+                    <div class="opcao">
+
+                        <h2>Geotérmica</h2>
+                        <a href="/geotermica">
+                            <img src="{{ url_for('static', filename='imagens/energias/geotermica.png') }}" alt="Geotérmica">
+                        </a>
+                    </div>
+                    <div class="opcao">
+
+                        <h2>Oceânica</h2>
+                        <a href="/oceanica">
+                            <img src="{{ url_for('static', filename='imagens/energias/oceanica.png') }}" alt="Oceânica">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    <div class="rodape">
+        <p>©GREENERGY</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
