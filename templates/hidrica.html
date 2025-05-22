@@ -1,207 +1,283 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/OqueSao.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/energias.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='imagens/icon.svg') }}"
+      alt="200%"
+    />
 
     <title>Greenergy</title>
-</head>
-<style>
-    .tela1 {
-        background-image: url("{{ url_for('static', filename='imagens/paisagem/paisagemHidrica.jpg') }}");
-    }
-</style>
+  </head>
+  <!-- Implementação do Bootstrap-->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
+  />
 
-<body>
+  <style>
+    .tela1 {
+      background-image: url("{{ url_for('static', filename='imagens/paisagem/paisagemHidrica.jpg') }}");
+    }
+  </style>
+
+  <body>
     <!-- Início -->
     <div class="tela1">
-        <!-- Menu navegação -->
-        <div class="menuNavegação">
-            <!-- Título -->
-            <h1>Greenergy</h1>
-            <!-- Ícone do menu hamburguer -->
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <!-- Navegação -->
-            <nav>
-                <a href="/index#Sobre">Sobre</a>
-                <a href="/index#Contato">Contato</a>
-                <a href="/OqueSao">O que são</a>
-                <div class="dropdown">
-                    <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
-                    <div class="dropdown-content">
-                        <a href="/solar">Solar</a>
-                        <a href="/eolica">Eólica</a>
-                        <a href="/hidrica">Hídrica</a>
-                        <a href="/oceanica">Oceânica</a>
-                        <a href="/biomassa">Biomassa</a>
-                        <a href="/geotermica">Geotérmica</a>
-                    </div>
-                </div>
-                <a href="#">Estatísticas</a>
-            </nav>
-        </div>
-        <div class="titulo">
-            <h1>Energia Hídrica</h1>
-            <p>
-                A energia hídrica, ou hidroelétrica, é gerada a partir do aproveitamento
-                do movimento das águas dos rios. A força da água movimenta turbinas que
-                geram eletricidade, sendo uma das fontes mais utilizadas no Brasil e no
-                mundo.
-            </p>
-        </div>
+      <!-- Menu navegação -->
+      <div class="menuNavegação">
+        <!-- Título -->
+        <h1>Greenergy</h1>
+        <!-- Ícone do menu hamburguer -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <!-- Navegação -->
+        <nav>
+          <a href="/index#Sobre">Sobre</a>
+          <a href="/index#Contato">Contato</a>
+          <a href="/OqueSao">O que são</a>
+          <div class="dropdown">
+            <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+            <div class="dropdown-content">
+              <a href="/solar">Solar</a>
+              <a href="/eolica">Eólica</a>
+              <a href="/hidrica">Hídrica</a>
+              <a href="/oceanica">Oceânica</a>
+              <a href="/biomassa">Biomassa</a>
+              <a href="/geotermica">Geotérmica</a>
+            </div>
+          </div>
+          <a href="#">Estatísticas</a>
+        </nav>
+      </div>
+      <div class="titulo">
+        <h1>Energia Hídrica</h1>
+        <p>
+          A energia hídrica, ou hidroelétrica, é gerada a partir do
+          aproveitamento do movimento das águas dos rios. A força da água
+          movimenta turbinas que geram eletricidade, sendo uma das fontes mais
+          utilizadas no Brasil e no mundo.
+        </p>
+      </div>
     </div>
 
     <div class="tela2">
-        <div>
-            <h1>Tipos</h1>
-            <div class="conteudo">
+      <div>
+        <h1>Tipos</h1>
+        <div class="conteudo">
+          <div>
+            <h2>Usinas de reservatório</h2>
+            <p>
+              As usinas de reservatório (ou hidrelétricas com barragens) são o
+              tipo mais tradicional de geração hídrica, responsável pela maior
+              parte da capacidade instalada no mundo. Elas funcionam armazenando
+              água em um grande reservatório artificial, permitindo controle
+              sobre a geração de energia.
+            </p>
+          </div>
+          <div>
+            <h2>Usinas a fio d’água</h2>
+            <p>
+              As usinas a fio d'água (ou run-of-the-river) são um tipo de
+              hidrelétrica que não armazena água em grandes reservatórios,
+              operando com o fluxo natural do rio. Essa tecnologia é menos
+              impactante ambientalmente que as usinas de reservatório
+              tradicional, mas apresenta características operacionais distintas.
+            </p>
+          </div>
+        </div>
+        <h1>Vantagens</h1>
+        <div class="conteudo">
+          <div>
+            <h2>Fonte renovável e abundante</h2>
+            <p>
+              A energia hídrica é uma das fontes renováveis mais confiáveis do
+              mundo, pois depende do ciclo natural da água (evaporação, chuva e
+              escoamento), que se renova constantemente. No Brasil, a vasta rede
+              fluvial e o clima tropical garantem alto potencial hidrelétrico,
+              principalmente nas bacias do Amazonas, Paraná e São Francisco.
+              Diferentemente de combustíveis fósseis, que se esgotam, a água
+              utilizada nas usinas pode ser reaproveitada indefinidamente. Além
+              disso, o país tem 12% da água doce mundial, tornando essa fonte
+              estratégica para sua matriz energética limpa.
+            </p>
+          </div>
+          <div>
+            <h2>Alta capacidade de geração</h2>
+            <p>
+              Hidrelétricas estão entre as fontes mais potentes de energia
+              renovável, capazes de suprir demanda em larga escala. Por exemplo:
+              Uma única usina hidrelétrica como Belo Monte, com capacidade de
+              11,2 GW, pode produzir mais energia do que milhares de turbinas
+              eólicas ou painéis solares combinados. A Usina de Itaipu, segunda
+              maior do mundo, gera em média 90 milhões de MWh por ano, energia
+              suficiente para abastecer o Paraguai e cerca de 10% do consumo do
+              Brasil.
+            </p>
+          </div>
 
-                <div>
-                    <h2>Usinas de reservatório</h2>
-                    <p>
-                        As usinas de reservatório (ou hidrelétricas com barragens) são o tipo mais tradicional de geração hídrica, responsável pela maior parte da capacidade instalada no mundo. Elas funcionam armazenando água em um grande reservatório artificial, permitindo controle sobre a geração de energia.
-                </p>
-                </div>
-                <div>
-                    <h2>Usinas a fio d’água</h2>
-                    <p>
-                        As usinas a fio d'água (ou run-of-the-river) são um tipo de hidrelétrica que não armazena água em grandes reservatórios, operando com o fluxo natural do rio. Essa tecnologia é menos impactante ambientalmente que as usinas de reservatório tradicional, mas apresenta características operacionais distintas.
-                    </p>
-                </div>
-            </div>
-            <h1>Vantagens</h1>
-            <div class="conteudo">
+          <div class="grafico">
+            <img
+              src="{{ url_for('static', filename='imagens/energiaHidreletrica.png') }}"
+              alt="crescimentoEmrepregados"
+              width="40%"
+            />
+            <figcaption>
+              Geração de energia elétrica através de Energias Hídricas por ano.
+            </figcaption>
+          </div>
 
-                <div>
-                    <h2>Fonte renovável e abundante</h2>
-                    <p>
-                        A energia hídrica é uma das fontes renováveis mais confiáveis do mundo, pois depende do ciclo natural da água (evaporação, chuva e escoamento), que se renova constantemente. No Brasil, a vasta rede fluvial e o clima tropical garantem alto potencial hidrelétrico, principalmente nas bacias do Amazonas, Paraná e São Francisco. Diferentemente de combustíveis fósseis, que se esgotam, a água utilizada nas usinas pode ser reaproveitada indefinidamente. Além disso, o país tem 12% da água doce mundial, tornando essa fonte estratégica para sua matriz energética limpa.
-                    </p>
-                </div>
-                <div>
-                    <h2>Alta capacidade de geração</h2>
-                    <p>
-                        Hidrelétricas estão entre as fontes mais potentes de energia renovável, capazes de suprir demanda em larga escala. Por exemplo:
-                        <ul>
-                            <li>Uma única usina como Belo Monte (11,2 GW) pode produzir mais energia que milhares de turbinas eólicas ou painéis solares combinados.</li>
-                            <li>A Usina de Itaipu, a segunda maior do mundo, gera média de 90 milhões de MWh/ano, suficiente para abastecer o Paraguai e ~10% do Brasil.</li>
-                        </ul>
-                    </p>
-                </div>
+          <div>
+            <h2>Baixo custo operacional</h2>
+            <p>
+              Após a construção, hidrelétricas têm custos de operação
+              extremamente baixos porque:
 
-                <div class="grafico">
-                    <img src="{{ url_for('static', filename='imagens/energiaHidreletrica.png') }}" alt="crescimentoEmrepregados"
-                        width="40%">
-                    <figcaption>Geração de energia elétrica através de Energias Hídricas por ano.
-                    </figcaption>
-                </div>
+              <b>Manutenção simplificada:</b> Turbinas e geradores têm vida útil
+              de 50+ anos. <b>Eficiência energética:</b> Convertem ~90% da
+              energia da água em eletricidade (contra 40-60% de termelétricas).
+              <b>Não dependem de combustível</b> (a água é "grátis" após o
+              represamento).
+            </p>
+          </div>
+        </div>
 
-                <div>
-                    <h2>Baixo custo operacional</h2>
-                    <p>
-                        Após a construção, hidrelétricas têm custos de operação extremamente baixos porque:
-                        <ul>
-                            <li><b>Manutenção simplificada:</b> Turbinas e geradores têm vida útil de 50+ anos.</li>
-                            <li><b>Eficiência energética:</b> Convertem ~90% da energia da água em eletricidade (contra 40-60% de termelétricas).</li>
-                            <li><b>Não dependem de combustível</b> (a água é "grátis" após o represamento).</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
+        <h1>Desvantagens</h1>
+        <div class="conteudo">
+          <div>
+            <h2>Alto impacto ambiental</h2>
+            <p>
+              A construção de hidrelétricas, especialmente as com grandes
+              reservatórios, causa alterações profundas nos ecossistemas:
 
-            <h1>Desvantagens</h1>
-            <div class="conteudo">
+              <b>Alagamento de áreas naturais:</b> Florestas são submersas,
+              destruindo habitats e biodiversidade (ex.: Usina de Balbina, que
+              alagou 2.360 km² de floresta amazônica).
+              <b>Emissões de metano (CH₄):</b> A decomposição de matéria
+              orgânica submersa libera gases de efeito estufa, podendo tornar
+              algumas hidrelétricas mais poluentes que termelétricas no curto
+              prazo. <b>Alteração no fluxo dos rios:</b> Afeta espécies
+              migratórias de peixes (como o dourado) e a dinâmica de sedimentos,
+              impactando toda a cadeia alimentar aquática.
+            </p>
+          </div>
+          <div>
+            <h2>Dependência do regime de chuvas</h2>
+            <p>
+              A geração de energia hídrica está sujeita a variações climáticas,
+              o que pode comprometer sua eficiência:
 
-                <div>
-                    <h2>Alto impacto ambiental</h2>
-                    <p>
-                        A construção de hidrelétricas, especialmente as com grandes reservatórios, causa alterações profundas nos ecossistemas:
-                        <ul>
-                            <li><b>Alagamento de áreas naturais:</b> Florestas são submersas, destruindo habitats e biodiversidade (ex.: Usina de Balbina, que alagou 2.360 km² de floresta amazônica).</li>
-                            <li><b>Emissões de metano (CH₄):</b> A decomposição de matéria orgânica submersa libera gases de efeito estufa, podendo tornar algumas hidrelétricas mais poluentes que termelétricas no curto prazo.</li>
-                            <li><b>Alteração no fluxo dos rios:</b> Afeta espécies migratórias de peixes (como o dourado) e a dinâmica de sedimentos, impactando toda a cadeia alimentar aquática.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div>
-                    <h2>Dependência do regime de chuvas</h2>
-                    <p>
-                        A geração de energia hídrica está sujeita a variações climáticas, o que pode comprometer sua eficiência:
-                        <ul>
-                            <li><b>Seca prolongada:</b> Em períodos de estiagem, os reservatórios podem atingir níveis críticos, reduzindo a capacidade de geração (ex.: Crise hídrica de 2021 no Brasil, que levou ao acionamento de termelétricas caras).</li>
-                            <li><b>Incerteza energética:</b> Diferentemente de fontes como solar e eólica, que podem ser complementadas com baterias, hidrelétricas dependem exclusivamente da disponibilidade de água.</li>
-                        </ul>
-                    </p>
-                </div>
-                <div>
-                    <h2>Deslocamento de populações</h2>
-                    <p>
-                        A construção de barragens frequentemente desloca comunidades inteiras, gerando conflitos sociais:
-                        <ul>
-                            <li><b>Reassentamentos forçados:</b> Projetos como Itaipu e Tucuruí deslocaram milhares de famílias, muitas sem compensação adequada.</li>
-                            <li><b>Perda de terras tradicionais: </b>Indígenas e ribeirinhos são especialmente afetados, com impactos culturais irreversíveis (ex.: Usina de Belo Monte, no Pará).</li>
-                        </ul>
-                    </p>
-                </div>
-                <div>
-                    <h2>Custo inicial elevado</h2>
-                    <p>
-                        Fazer uma hidrelétrica é caro e demorado. Belo Monte, por exemplo, custou mais de R$ 40 bilhões e levou 10 anos para ficar pronta. Além da construção cara, muitas vezes é preciso mudar estradas e cidades inteiras, aumentando ainda mais o preço final.
-                    </p>
-                </div>
-            </div>
-            <h1>Aplicação</h1>
-            <div class="conteudo">
+              <b>Seca prolongada:</b> Em períodos de estiagem, os reservatórios
+              podem atingir níveis críticos, reduzindo a capacidade de geração
+              (ex.: Crise hídrica de 2021 no Brasil, que levou ao acionamento de
+              termelétricas caras). <b>Incerteza energética:</b> Diferentemente
+              de fontes como solar e eólica, que podem ser complementadas com
+              baterias, hidrelétricas dependem exclusivamente da disponibilidade
+              de água.
+            </p>
+          </div>
+          <div>
+            <h2>Deslocamento de populações</h2>
+            <p>
+              A construção de barragens frequentemente desloca comunidades
+              inteiras, gerando conflitos sociais:
 
-                <div>
-                    <h2>Grandes usinas hidroelétricas</h2>
-                    <p>
-                        São usinas com capacidade acima de 30 MW, responsáveis pela maior parte da energia hídrica no mundo. Exemplos como Itaipu e Belo Monte fornecem energia em larga escala, mas exigem grandes barragens que impactam o meio ambiente. São ideais para atender demandas regionais e nacionais de energia.
-                    </p>
-                </div>
-                <div>
-                    <h2>Pequenas Centrais Hidrelétricas (PCHs)</h2>
-                    <p>
-                        Com capacidade entre 1 MW e 30 MW, as PCHs têm menor impacto ambiental que as grandes usinas. São boas para abastecer cidades menores ou indústrias locais, usando rios de médio porte. No Brasil, são importantes para diversificar a matriz energética com menos danos à natureza.
-                    </p>
-                </div>
-                <div>
-                    <h2>Microgeração</h2>
-                    <p>
-                        Sistemas pequenos (até 1 MW) que aproveitam córregos ou quedas d’água naturais. Ideais para propriedades rurais ou comunidades isoladas, têm baixo custo e impacto mínimo. São uma solução sustentável para levar energia a locais onde a rede elétrica não chega.
-                    </p>
-                </div>
-            </div>
+              <b>Reassentamentos forçados:</b> Projetos como Itaipu e Tucuruí
+              deslocaram milhares de famílias, muitas sem compensação adequada.
+              <b>Perda de terras tradicionais: </b>Indígenas e ribeirinhos são
+              especialmente afetados, com impactos culturais irreversíveis (ex.:
+              Usina de Belo Monte, no Pará).
+            </p>
+          </div>
+          <div>
+            <h2>Custo inicial elevado</h2>
+            <p>
+              Fazer uma hidrelétrica é caro e demorado. Belo Monte, por exemplo,
+              custou mais de R$ 40 bilhões e levou 10 anos para ficar pronta.
+              Além da construção cara, muitas vezes é preciso mudar estradas e
+              cidades inteiras, aumentando ainda mais o preço final.
+            </p>
+          </div>
+        </div>
+        <h1>Aplicação</h1>
+        <div class="conteudo">
+          <div>
+            <h2>Grandes usinas hidroelétricas</h2>
+            <p>
+              São usinas com capacidade acima de 30 MW, responsáveis pela maior
+              parte da energia hídrica no mundo. Exemplos como Itaipu e Belo
+              Monte fornecem energia em larga escala, mas exigem grandes
+              barragens que impactam o meio ambiente. São ideais para atender
+              demandas regionais e nacionais de energia.
+            </p>
+          </div>
+          <div>
+            <h2>Pequenas Centrais Hidrelétricas (PCHs)</h2>
+            <p>
+              Com capacidade entre 1 MW e 30 MW, as PCHs têm menor impacto
+              ambiental que as grandes usinas. São boas para abastecer cidades
+              menores ou indústrias locais, usando rios de médio porte. No
+              Brasil, são importantes para diversificar a matriz energética com
+              menos danos à natureza.
+            </p>
+          </div>
+          <div>
+            <h2>Microgeração</h2>
+            <p>
+              Sistemas pequenos (até 1 MW) que aproveitam córregos ou quedas
+              d’água naturais. Ideais para propriedades rurais ou comunidades
+              isoladas, têm baixo custo e impacto mínimo. São uma solução
+              sustentável para levar energia a locais onde a rede elétrica não
+              chega.
+            </p>
+          </div>
+        </div>
 
-            <div class="grafico">
-                <img src="{{ url_for('static', filename='imagens/setorEnergiaHidrica.png') }}" alt="crescimentoEmrepregados"
-                    width="40%">
-                <figcaption>Distribuição da geração de energia hídrica por setor.
-                </figcaption>
-            </div>
+        <div class="grafico">
+          <img
+            src="{{ url_for('static', filename='imagens/setorEnergiaHidrica.png') }}"
+            alt="crescimentoEmrepregados"
+            width="40%"
+          />
+          <figcaption>
+            Distribuição da geração de energia hídrica por setor.
+          </figcaption>
+        </div>
 
-            <h1>Curiosidades</h1>
-            <div class="conteudo">
-
-                <ul class="listaCuriosidades">
-                    <li>O Brasil é o segundo maior produtor de energia hidroelétrica
-                        do mundo, atrás apenas da China.
-                    </li>
-                    <li>A Usina de Itaipu, na fronteira com o Paraguai, já foi a
-                        maior do mundo em geração de energia.
-                    </li>
-                    <li>
-                        Cerca de 60% da energia elétrica no Brasil vem de fontes hídricas.
-                    </li>
-                </ul>
-            </div>
-            <!-- <div>
+        <h1>Curiosidades</h1>
+        <div class="conteudo">
+          <ul class="listaCuriosidades">
+            <li>
+              O Brasil é o segundo maior produtor de energia hidroelétrica do
+              mundo, atrás apenas da China.
+            </li>
+            <li>
+              A Usina de Itaipu, na fronteira com o Paraguai, já foi a maior do
+              mundo em geração de energia.
+            </li>
+            <li>
+              Cerca de 60% da energia elétrica no Brasil vem de fontes hídricas.
+            </li>
+          </ul>
+        </div>
+        <!-- <div>
                 <h1>Veja na prática</h1>
                 <div class="interacoes">
                     <a href="#">Compare com outras energias</a>
@@ -210,64 +286,75 @@
                     <a href="#">Quiz rápido</a>
                 </div>
             </div> -->
+      </div>
+
+      <div id="menuEnergias">
+        <h1>Tipos de Energias</h1>
+
+        <div class="opcoes">
+          <div class="opcao">
+            <h2>Hídrica</h2>
+            <a href="/hidrica">
+              <img
+                src="{{ url_for('static', filename='imagens/energias/hidrica.png') }}"
+                alt="Hídrica"
+              />
+            </a>
+          </div>
+          <div class="opcao">
+            <h2>Solar</h2>
+            <a href="/solar">
+              <img
+                src="{{ url_for('static', filename='imagens/energias/solar.png') }}"
+                alt="Solar"
+              />
+            </a>
+          </div>
+          <div class="opcao">
+            <h2>Eólica</h2>
+            <a href="/eolica">
+              <img
+                src="{{ url_for('static', filename='imagens/energias/eolica.png') }}"
+                alt="Eólica"
+              />
+            </a>
+          </div>
+          <div class="opcao">
+            <h2>Biomassa</h2>
+            <a href="/biomassa">
+              <img
+                src="{{ url_for('static', filename='imagens/energias/biomassa.png') }}"
+                alt="Biomassa"
+              />
+            </a>
+          </div>
+          <div class="opcao">
+            <h2>Geotérmica</h2>
+            <a href="/geotermica">
+              <img
+                src="{{ url_for('static', filename='imagens/energias/geotermica.png') }}"
+                alt="Geotérmica"
+              />
+            </a>
+          </div>
+          <div class="opcao">
+            <h2>Oceânica</h2>
+            <a href="/oceanica">
+              <img
+                src="{{ url_for('static', filename='imagens/energias/oceanica.png') }}"
+                alt="Oceânica"
+              />
+            </a>
+          </div>
         </div>
-
-        <div id="menuEnergias">
-                <h1>Tipos de Energias</h1>
-
-                <div class="opcoes">
-
-                    <div class="opcao">
-
-                        <h2>Hídrica</h2>
-                        <a href="/hidrica">
-                            <img src="{{ url_for('static', filename='imagens/energias/hidrica.png') }}" alt="Hídrica">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Solar</h2>
-                        <a href="/solar">
-                            <img src="{{ url_for('static', filename='imagens/energias/solar.png') }}" alt="Solar">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Eólica</h2>
-                        <a href="/eolica">
-                            <img src="{{ url_for('static', filename='imagens/energias/eolica.png') }}" alt="Eólica">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Biomassa</h2>
-                        <a href="/biomassa">
-                            <img src="{{ url_for('static', filename='imagens/energias/biomassa.png') }}" alt="Biomassa">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Geotérmica</h2>
-                        <a href="/geotermica">
-                            <img src="{{ url_for('static', filename='imagens/energias/geotermica.png') }}" alt="Geotérmica">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Oceânica</h2>
-                        <a href="/oceanica">
-                            <img src="{{ url_for('static', filename='imagens/energias/oceanica.png') }}" alt="Oceânica">
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+      </div>
     </div>
     <div class="rodape">
-        <p>©GREENERGY</p>
+      <p>©GREENERGY</p>
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-
+  </body>
+  <!-- Implementação do Bootstrap-->
+  <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </html>
