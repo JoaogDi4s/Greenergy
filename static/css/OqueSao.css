@@ -6,7 +6,7 @@ h1{
     padding: 25px 0;
     width: 90%;
     border-radius: 2rem;
-    background-color: #9bffc2;
+    background-color: #c7dfa7;
     text-decoration: none;
 }
 .menuNavegação h1{
@@ -15,6 +15,23 @@ h1{
     width: 5rem;
     background-color: transparent;
 }
+
+.tituloEnergias{
+    margin-top: 5rem;
+}
+.tituloEnergias h1 {
+    padding: 0;
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.tituloEnergias p {
+    width: 70%;
+    text-align: justify;
+}
+
 .titulo{
     margin-top: 5rem;
 }
@@ -24,11 +41,13 @@ h1{
     background-color: transparent;
     width: 100%;
     font-size: 2.5rem;
+    color: #c7dfa7;
 }
 
 .titulo p {
     width: 70%;
     text-align: justify;
+    color: #c7dfa7;
 }
 
 .tela2 {
@@ -39,20 +58,20 @@ h1{
 }
 
 .tela2 h1 {
-    color: #247552;
+    color: #3c5718;
     justify-self: center;
     padding-bottom: 2rem;
     margin-top: 3rem;
 }
 
 .tela2 h2 {
-    color: #247552;
+    color: #3c5718;
     justify-self: baseline;
     padding-left: 5rem;
 }
 
 .tela2 p, li {
-    color: #247552;
+    color: #3c5718;
     width: 95%;
     font-size: 1.5rem;
     padding-left: 7rem;
@@ -66,13 +85,13 @@ h1{
     align-items: center;
     font-size: 1.5rem;
     padding-bottom: 2rem;
-    color: #247552;
+    color: #3c5718;
 }
 
 #menuEnergias{
     height: 100%;
     width: 100%;
-    background-color: #247552;
+    background-color: #678E34;
     margin-top: 3rem;
     padding-bottom: 20px;
 }
@@ -91,7 +110,7 @@ h1{
     padding: 1rem;
 }
 .opcao a{
-    background-color: #68D391;
+    background-color: #c7dfa7;
     border-radius: 0.75rem;
     text-align: center;
     height: 12.5rem;

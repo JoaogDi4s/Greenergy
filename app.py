@@ -11,6 +11,18 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/Quizzes')
+def Quizzes():
+    return render_template('Quizzes.html')
+
+@app.route('/QuizSolar')
+def QuizSolar():
+    return render_template('QuizSolar.html')
+
+# @app.route('/Estatisticas')
+# def Estatisticas():
+#     return render_template('Estatisticas.html')
+
 @app.route('/OqueSao')
 def OqueSao():
     graficos.matrizEnergetica()

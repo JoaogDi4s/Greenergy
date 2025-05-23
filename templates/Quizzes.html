@@ -7,6 +7,7 @@
     <!-- Fonte Montserrat -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quizzes.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%">
 
     <title>Greenergy</title>
@@ -26,7 +27,18 @@
                 <a href="/index#Sobre">Sobre</a>
                 <a href="/index#Contato">Contato</a>
                 <a href="/OqueSao">O que são</a>
-                <a href="/Quizzes">Quizzes</a>
+                <div class="dropdown">
+                    <a href="/Quizzes" class="dropbtn">Quizzes</a>
+                    <div class="dropdown-content">
+                        <a href="/#">Conhecimentos Gerais</a>
+                        <a href="/QuizSolar">Solar</a>
+                        <a href="/#">Eólica</a>
+                        <a href="/#">Hídrica</a>
+                        <a href="/#">Oceânica</a>
+                        <a href="/#">Biomassa</a>
+                        <a href="/#">Geotérmica</a>
+                    </div>
+                </div>
                 <div class="dropdown">
                     <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
                     <div class="dropdown-content">
@@ -41,40 +53,25 @@
                 <!-- <a href="#">Estatísticas</a> -->
             </nav>
         </div>
-        <div class="titulo">
-            <h1>Greenergy</h1>
-            <p>Impulsionando um futuro sustentável por meio de soluções inovadoras em energias renováveis</p>
+        <div>
+            <h1>Quizzes</h1>
+            <p>Teste seus conhecimentos sobre energias renováveis!</p>
         </div>
     </div>
 
     <!-- Sobre -->
     <div class="tela2">
-        <h1 id="Sobre">
-            Sobre o projeto
-        </h1>
-        <p>
-            O Greenergy é uma plataforma informativa dedicada a promover o conhecimento sobre energias renováveis e sua
-            importância para um futuro sustentável. Com o objetivo de educar e conscientizar o público sobre as diversas
-            fontes de energia renovável, como solar, eólica, hídrica e biomassa, a plataforma destaca suas vantagens,
-            desafios e o papel crucial que desempenham na redução dos impactos ambientais.
-
-            Por meio de conteúdos acessíveis e de fácil compreensão, o Greenergy busca informar qualquer pessoa
-            interessada em entender como essas tecnologias funcionam, o impacto delas na sociedade e sua contribuição
-            para o combate às mudanças climáticas. A plataforma também oferece gráficos interativos e dados atualizados,
-            proporcionando uma visão clara e detalhada do cenário global e local das energias renováveis, com ênfase na
-            importância de sua adoção para a preservação do meio ambiente e o futuro do planeta.
-        </p>
+        <a href="#"><button>Conhecimentos Gerais</button></a>
+        <a href="#"><button>Energia solar</button></a>
+        <a href="#"><button>Energia eólica</button></a>
+        <a href="#"><button>Energia hídrica</button></a>
+        <a href="#"><button>Energia oceânica</button></a>
+        <a href="#"><button>Energia de biomassa</button></a>
+        <a href="#"><button>Energia geotérmica</button></a>
+        
     </div>
-    <!-- Contato -->
-    <div class="tela3">
-        <h1 id="Contato">Entre em contato</h1>
-        <div class="inputs">
-            <input type="text" name="nome" id="nome" placeholder="Seu nome">
-            <input type="email" name="email" id="email" placeholder="Seu Email">
-            <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem"></textarea>
-            <button type="submit">Enviar</button>
-        </div>
-    </div>
+   
+    <!-- RODAPE -->
     <div class="rodape">
         <p>©GREENERGY</p>
     </div>
