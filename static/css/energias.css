@@ -1,20 +1,15 @@
+.menuNavegação h1 a {
+  text-decoration: none;
+  color: #3c5718;
+}
+
 .tela1 {
+  background-color: black;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 0;
-}
-
-.tela1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* 80% escuro */
-  z-index: -1; /* atrás do conteúdo */
 }
 
 .conteudo {

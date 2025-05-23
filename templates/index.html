@@ -27,78 +27,100 @@
   />
   <body>
     <!-- Início -->
-    <div class="tela1">
-      <!-- Menu navegação -->
-      <div class="menuNavegação">
-        <!-- Título -->
-        <h1>Greenergy</h1>
-        <!-- Ícone do menu hamburguer -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <!-- Navegação -->
-        <nav>
-          <a href="/index#Sobre">Sobre</a>
-          <a href="/index#Contato">Contato</a>
-          <a href="/OqueSao">O que são</a>
-          <div class="dropdown">
-            <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
-            <div class="dropdown-content">
-              <a href="/solar">Solar</a>
-              <a href="/eolica">Eólica</a>
-              <a href="/hidrica">Hídrica</a>
-              <a href="/oceanica">Oceânica</a>
-              <a href="/biomassa">Biomassa</a>
-              <a href="/geotermica">Geotérmica</a>
+    <div class="tela0 d-flex flex-column px-4 pt-2">
+      <div class="tela1 px-4 pt-2">
+        <!-- Menu navegação -->
+
+        <div class="menuNavegação mt-xl-2">
+          <!-- Título -->
+          <h1>Greenergy</h1>
+          <!-- Ícone do menu hamburguer -->
+          <div class="menu-icon" onclick="menuSanduiche()">☰</div>
+          <!-- Navegação -->
+          <nav>
+            <a href="/index#Sobre">Sobre</a>
+            <a href="/index#Contato">Contato</a>
+            <a href="/OqueSao">O que são</a>
+            <div class="dropdown">
+              <a href="/Quizzes" class="dropbtn">Quizzes</a>
+              <div class="dropdown-content">
+                <a href="/#">Conhecimentos Gerais</a>
+                <a href="/QuizSolar">Solar</a>
+                <a href="/#">Eólica</a>
+                <a href="/#">Hídrica</a>
+                <a href="/#">Oceânica</a>
+                <a href="/#">Biomassa</a>
+                <a href="/#">Geotérmica</a>
+              </div>
             </div>
-          </div>
-          <a href="#">Estatísticas</a>
-        </nav>
+            <div class="dropdown">
+              <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+              <div class="dropdown-content">
+                <a href="/solar">Solar</a>
+                <a href="/eolica">Eólica</a>
+                <a href="/hidrica">Hídrica</a>
+                <a href="/oceanica">Oceânica</a>
+                <a href="/biomassa">Biomassa</a>
+                <a href="/geotermica">Geotérmica</a>
+              </div>
+            </div>
+            <!-- <a href="#">Estatísticas</a> -->
+          </nav>
+        </div>
+
+        <div class="titulo my-sm-auto my-md-6 p-md-6">
+          <h1>Greenergy</h1>
+          <p>
+            Impulsionando um futuro sustentável por meio de soluções inovadoras
+            em energias renováveis
+          </p>
+        </div>
       </div>
-      <div class="titulo">
-        <h1>Greenergy</h1>
+      <!-- Sobre -->
+
+      <div class="tela2">
+        <h1 id="Sobre">Sobre o projeto</h1>
         <p>
-          Impulsionando um futuro sustentável por meio de soluções inovadoras em
-          energias renováveis
+          O Greenergy é uma plataforma informativa dedicada a promover o
+          conhecimento sobre energias renováveis e sua importância para um
+          futuro sustentável. Nosso objetivo é educar e conscientizar sobre as
+          diversas fontes de energia renovável, como solar, eólica, hídrica e
+          biomassa, destacando suas vantagens, desafios e como elas contribuem
+          para a redução dos impactos ambientais. Desenvolvido no contexto da
+          disciplina UPX III da FACENS, o projeto visa reunir informações claras
+          e acessíveis para qualquer pessoa interessada em entender como essas
+          tecnologias funcionam, seu impacto na sociedade e o papel que
+          desempenham no combate às mudanças climáticas. Além disso, o Greenergy
+          oferece gráficos interativos e dados atualizados para uma melhor
+          compreensão do cenário global e local das energias renováveis.
         </p>
+      </div>
+      <!-- Contato -->
+      <div class="tela3">
+        <h1 id="Contato">Entre em contato</h1>
+        <div class="inputs d-flex flex-column w-50 gap-3 fs-4">
+          <input type="text" name="nome" id="nome" placeholder="Seu nome" />
+          <input type="email" name="email" id="email" placeholder="Seu Email" />
+          <textarea
+            name="mensagem"
+            id="mensagem"
+            placeholder="Sua mensagem"
+          ></textarea>
+          <button
+            class="btn p-3 border-0 rounded-4 text-white fs-5"
+            type="submit"
+          >
+            Enviar
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- Sobre -->
-    <div class="tela2">
-      <h1 id="Sobre">Sobre o projeto</h1>
-      <p>
-        O Greenergy é uma plataforma informativa dedicada a promover o
-        conhecimento sobre energias renováveis e sua importância para um futuro
-        sustentável. Nosso objetivo é educar e conscientizar sobre as diversas
-        fontes de energia renovável, como solar, eólica, hídrica e biomassa,
-        destacando suas vantagens, desafios e como elas contribuem para a
-        redução dos impactos ambientais. Desenvolvido no contexto da disciplina
-        UPX III da FACENS, o projeto visa reunir informações claras e acessíveis
-        para qualquer pessoa interessada em entender como essas tecnologias
-        funcionam, seu impacto na sociedade e o papel que desempenham no combate
-        às mudanças climáticas. Além disso, o Greenergy oferece gráficos
-        interativos e dados atualizados para uma melhor compreensão do cenário
-        global e local das energias renováveis.
-      </p>
-    </div>
-    <!-- Contato -->
-    <div class="tela3">
-      <h1 id="Contato">Entre em contato</h1>
-      <div class="inputs">
-        <input type="text" name="nome" id="nome" placeholder="Seu nome" />
-        <input type="email" name="email" id="email" placeholder="Seu Email" />
-        <textarea
-          name="mensagem"
-          id="mensagem"
-          placeholder="Sua mensagem"
-        ></textarea>
-        <button type="submit">Enviar</button>
-      </div>
-    </div>
     <div class="rodape">
       <p>©GREENERGY</p>
     </div>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   <!-- Implementação do Bootstrap-->
   <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </html>

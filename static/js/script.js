@@ -1,6 +1,6 @@
-function toggleMenu() {
-    const nav = document.querySelector(".menuNavegação nav");
-    nav.classList.toggle("show");
+function menuSanduiche() {
+        const nav = document.querySelector(".menuNavegação nav");
+        nav.classList.toggle("show");
 }
 
 // Fecha o menu ao clicar num link (em mobile)

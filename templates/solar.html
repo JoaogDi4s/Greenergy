@@ -41,18 +41,30 @@
 
   <body>
     <!-- Início -->
-    <div class="tela1">
+    <div class="tela1 d-flex flex-column px-4 pt-3">
       <!-- Menu navegação -->
       <div class="menuNavegação">
         <!-- Título -->
-        <h1>Greenergy</h1>
+        <h1><a href="/index">Greenergy</a></h1>
         <!-- Ícone do menu hamburguer -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-icon" onclick="menuSanduiche()">☰</div>
         <!-- Navegação -->
         <nav>
           <a href="/index#Sobre">Sobre</a>
           <a href="/index#Contato">Contato</a>
           <a href="/OqueSao">O que são</a>
+          <div class="dropdown">
+            <a href="/Quizzes" class="dropbtn">Quizzes</a>
+            <div class="dropdown-content">
+              <a href="/#">Conhecimentos Gerais</a>
+              <a href="/QuizSolar">Solar</a>
+              <a href="/#">Eólica</a>
+              <a href="/#">Hídrica</a>
+              <a href="/#">Oceânica</a>
+              <a href="/#">Biomassa</a>
+              <a href="/#">Geotérmica</a>
+            </div>
+          </div>
           <div class="dropdown">
             <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
             <div class="dropdown-content">
@@ -64,7 +76,7 @@
               <a href="/geotermica">Geotérmica</a>
             </div>
           </div>
-          <a href="#">Estatísticas</a>
+          <!-- <a href="#">Estatísticas</a> -->
         </nav>
       </div>
       <div class="titulo">
