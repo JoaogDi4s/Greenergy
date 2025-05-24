@@ -4,12 +4,11 @@
 }
 
 .tela1 {
-  background-color: black;
-  position: relative;
+  /* position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  z-index: 0;
+  background-position: center; */
+  z-index: 1;
 }
 
 .conteudo {

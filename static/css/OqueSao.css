@@ -1,15 +1,23 @@
-/* .tela0 {
-  padding-top: 0;
-  margin: 0;
+.tela0 {
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+.tela0::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0; */
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-position: center;
-  position: relative;
-} */
+  filter: brightness(50%);
+  z-index: -1;
+}
 
 .tela1 {
-  background-color: transparent;
+  z-index: 1;
   display: flex;
   flex-direction: column;
 }

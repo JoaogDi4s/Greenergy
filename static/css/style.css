@@ -14,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.tela0 {
+.tela0home {
   background-color: #c7dfa7;
 }
 
@@ -119,14 +119,14 @@ nav a:hover {
 
 .titulo h1 {
   /* color: #3c5718; */
-  color: black;
+  color: white;
   font-size: 6rem;
   margin: 0;
 }
 
 .titulo p {
   /* color: #3c5718; */
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 1rem;

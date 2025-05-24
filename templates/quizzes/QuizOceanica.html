@@ -31,29 +31,29 @@
   />
   <body>
     <!-- Início -->
-    <div class="tela0 d-flex flex-column px-4 pt-3">
-      <div class="tela1 px-4 pt-3">
+    <div class="tela0home d-flex flex-column px-4 pt-3">
+      <div class="tela1 px-4 pt-2">
         <!-- Menu navegação -->
         <div class="menuNavegação">
           <!-- Título -->
           <h1><a href="/index">Greenergy</a></h1>
           <!-- Ícone do menu hamburguer -->
-          <div class="menu-icon" onclick="toggleMenu()">☰</div>
+          <div class="menu-icon" onclick="menuSanduiche()">☰</div>
           <!-- Navegação -->
           <nav>
             <a href="/index#Sobre">Sobre</a>
             <a href="/index#Contato">Contato</a>
             <a href="/OqueSao">O que são</a>
             <div class="dropdown">
-              <a href="/Quizzes" class="dropbtn">Quizzes</a>
+              <a href="#" class="dropbtn">Quizzes</a>
               <div class="dropdown-content">
-                <a href="/#">Conhecimentos Gerais</a>
+                <a href="/QuizGeral">Conhecimentos Gerais</a>
                 <a href="/QuizSolar">Solar</a>
-                <a href="/#">Eólica</a>
-                <a href="/#">Hídrica</a>
-                <a href="/#">Oceânica</a>
-                <a href="/#">Biomassa</a>
-                <a href="/#">Geotérmica</a>
+                <a href="/QuizEolica">Eólica</a>
+                <a href="/QuizHidrica">Hídrica</a>
+                <a href="/QuizOceanica">Oceânica</a>
+                <a href="/QuizBiomassa">Biomassa</a>
+                <a href="/QuizGeotermica">Geotérmica</a>
               </div>
             </div>
             <div class="dropdown">
@@ -71,7 +71,7 @@
           </nav>
         </div>
         <div class="titulo">
-          <h1>Quiz : Energia solar</h1>
+          <h1>Quiz : Energia Oceânica</h1>
         </div>
       </div>
 
@@ -103,51 +103,56 @@
       // Quiz Data
       const quizData = [
         {
-          question: "O que é energia solar?",
+          question: "Como funciona a energia maremotriz?",
           options: [
-            "Gerada pelo vento",
-            "Queima de combustíveis fósseis",
-            "Proveniente da luz solar",
-            "Gerada pelas marés",
+            "Usa a força do vento sobre o mar para girar turbinas.",
+            "Converte o calor da areia em energia elétrica.",
+            "Aproveita o movimento das marés com barragens ou turbinas subaquáticas.",
+            "Gera energia a partir de placas solares flutuantes.",
           ],
           answer: 2,
         },
         {
-          question:
-            "Qual é o principal equipamento usado para captar energia solar?",
+          question: "O que diferencia a energia térmica oceânica (OTEC)?",
           options: [
-            "Turbina hidráulica",
-            "Painel solar (fotovoltaico)",
-            "Gerador a diesel",
-            "Motor a combustão",
-          ],
-          answer: 1,
-        },
-        {
-          question: "Qual é a principal vantagem da energia solar?",
-          options: [
-            "É cara e difícil de instalar",
-            "Depende da queima de carvão",
-            "É uma fonte inesgotável e limpa",
-            "Funciona apenas à noite",
-          ],
-          answer: 2,
-        },
-        {
-          question: "O que acontece com a energia solar em dias nublados?",
-          options: [
-            "Para completamente de funcionar",
-            "Gera energia com menor intensidade",
-            "Aumenta a produção de energia",
-            "Se transforma em energia eólica",
+            "Utiliza correntes marítimas profundas para movimentar turbinas diretamente.",
+            "Aproveita a diferença de temperatura entre águas quentes e frias para gerar energia.",
+            "Converte o som dos oceanos em eletricidade.",
+            "Depende da força das ondas de tempestade.",
           ],
           answer: 1,
         },
         {
           question:
-            "Qual país é um dos maiores produtores de energia solar do mundo?",
-          options: ["Canadá", "Japão", "Brasil", "China"],
-          answer: 3,
+            "Qual das vantagens abaixo é característica da energia oceânica?",
+          options: [
+            "Alta emissão de CO₂ por combustão de fluidos.",
+            "Uso exclusivo de áreas urbanas para instalação.",
+            "Fonte constante e previsível, com operação 24h por dia.",
+            "Produção limitada às estações do ano.",
+          ],
+          answer: 2,
+        },
+        {
+          question:
+            "Qual das alternativas representa um desafio comum da energia oceânica?",
+          options: [
+            "Fácil acesso e baixos custos de instalação.",
+            "Alta eficiência em áreas desérticas.",
+            "Corrosão de equipamentos e falhas frequentes nas usinas. ",
+            "Baixo impacto ambiental em todas as regiões.",
+          ],
+          answer: 2,
+        },
+        {
+          question: "Onde a energia das ondas é melhor aproveitada?",
+          options: [
+            "No interior dos continentes.",
+            "Em áreas com pouca variação de maré.",
+            "Em litorais com ondas fortes, como no Sul do Brasil.",
+            "Apenas em países frios com geleiras.",
+          ],
+          answer: 2,
         },
       ];
 
