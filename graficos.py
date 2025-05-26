@@ -6,10 +6,11 @@ import os
 def matrizEnergetica():
     labels = ['Não Renováveis', 'Renováveis']
     sizes = [9.6, 90.4]
-    colors = ['#d3d3d3', '#68D391']
-    explode = (0.06, 0)
+    colors = ['#d3d3d3', '#68D391']  # Cinza claro e verde escuro
+    explode = (0.06, 0)              # Explode sutil para Não Renováveis
 
-    fig, ax = plt.subplots(figsize=(7, 7), facecolor='none')
+    # Criando o gráfico de pizza
+    fig, ax = plt.subplots(figsize=(7, 7), facecolor='none')  # Fundo transparente
     wedges, texts, autotexts = ax.pie(
         sizes,
         explode=explode,
@@ -21,6 +22,7 @@ def matrizEnergetica():
         textprops=dict(color="#247552", fontsize=14, fontweight='bold')
     )
 
+    # Centraliza o título e aumenta a fonte
     plt.title('Distribuição da Matriz Energética', fontsize=18, fontweight='bold', color='#247552')
 
     plt.setp(autotexts, size=15, weight="bold", color="#247552")
@@ -37,6 +39,7 @@ def crescimentoEmpregados():
 
     plt.title('Crescimento de empregados', fontsize=18, fontweight='bold', color='#247552')
 
+    # Adicionando rótulos aos eixos com formatação
     plt.xticks(x)
     plt.yticks(y)
     ax.set_xlabel('Ano', fontsize=14, fontweight='bold', color='#247552')
@@ -270,3 +273,4 @@ def geracaoOceanica():
 
     plt.tight_layout()  # Ajustar layout
     plt.savefig('static/imagens/geracaoOceanica.png')
+

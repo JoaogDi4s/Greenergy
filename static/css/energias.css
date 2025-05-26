@@ -1,46 +1,53 @@
-.tela1{
-    background-color: black;
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.conteudo{
-margin: 5rem;
+.menuNavegação h1 a {
+  text-decoration: none;
+  color: #3c5718;
 }
 
-.listaCuriosidades{
-    width: 100%;
+.tela1 {
+  /* position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+  z-index: 1;
 }
-.listaCuriosidades li{
-    padding-right: 7rem;
-    margin: 0 5rem;
+
+.conteudo {
+  margin: 5rem;
 }
-.interacoes{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+
+.listaCuriosidades {
+  width: 100%;
 }
-.interacoes a{
-    margin: 10px 0;
-    height: 70px;
-    width: 50rem;
-    border-radius: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    background-color: #68D391;
+.listaCuriosidades li {
+  padding-right: 7rem;
+  margin: 0 5rem;
 }
-.interacoes a:hover{
-    transform: scale(1.05);
+.interacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.opcoes a.ativo{
-    background-color: #2f855a;
-    pointer-events: none;
-    opacity: 0.7;
+.interacoes a {
+  margin: 10px 0;
+  height: 70px;
+  width: 50rem;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background-color: #68d391;
 }
+.interacoes a:hover {
+  transform: scale(1.05);
+}
+.opcoes a.ativo {
+  background-color: #2f855a;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
