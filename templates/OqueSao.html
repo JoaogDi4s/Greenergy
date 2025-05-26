@@ -1,200 +1,265 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/OqueSao.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/energias.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='imagens/icon.svg') }}"
+      alt="200%"
+    />
 
     <title>Greenergy</title>
-</head>
-<style>
-    .tela1 {
-        background-image: url("{{ url_for('static', filename='imagens/paisagemVerde.jpg') }}");
-        background-color: black;
-    }
-</style>
+  </head>
 
-<body>
-    <!-- Início -->
-    <div class="tela1">
+  <!-- Implementação do Bootstrap-->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
+  />
+
+  <style>
+    .tela0::before {
+      background-image: url("{{ url_for('static', filename='imagens/paisagem/teste.jpg') }}");
+    }
+    .tela1 {
+      background-color: transparent;
+    }
+  </style>
+
+  <body>
+    <div class="tela0 d-flex flex-column px-4 pt-3">
+      <!-- Início -->
+      <div class="tela1 px-4 pt-2">
         <!-- Menu navegação -->
         <div class="menuNavegação">
-            <!-- Título -->
-            <h1>Greenergy</h1>
-            <!-- Ícone do menu hamburguer -->
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <!-- Navegação -->
-            <nav>
-                <a href="/index#Sobre">Sobre</a>
-                <a href="/index#Contato">Contato</a>
-                <a href="/OqueSao">O que são</a>
-                <div class="dropdown">
-                    <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
-                    <div class="dropdown-content">
-                        <a href="/solar">Solar</a>
-                        <a href="/eolica">Eólica</a>
-                        <a href="/hidrica">Hídrica</a>
-                        <a href="/oceanica">Oceânica</a>
-                        <a href="/biomassa">Biomassa</a>
-                        <a href="/geotermica">Geotérmica</a>
-                    </div>
-                </div>
-                <a href="#">Estatísticas</a>
-            </nav>
+          <!-- Título -->
+          <h1><a href="/index">Greenergy</a></h1>
+          <!-- Ícone do menu hamburguer -->
+          <div class="menu-icon" onclick="menuSanduiche()">☰</div>
+          <!-- Navegação -->
+          <nav>
+            <a href="/index#Sobre">Sobre</a>
+            <a href="/index#Contato">Contato</a>
+            <a href="/OqueSao">O que são</a>
+            <div class="dropdown">
+              <a href="#" class="dropbtn">Quizzes</a>
+              <div class="dropdown-content">
+                <a href="/QuizGeral">Conhecimentos Gerais</a>
+                <a href="/QuizSolar">Solar</a>
+                <a href="/QuizEolica">Eólica</a>
+                <a href="/QuizHidrica">Hídrica</a>
+                <a href="/QuizOceanica">Oceânica</a>
+                <a href="/QuizBiomassa">Biomassa</a>
+                <a href="/QuizGeotermica">Geotérmica</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+              <div class="dropdown-content">
+                <a href="/solar">Solar</a>
+                <a href="/eolica">Eólica</a>
+                <a href="/hidrica">Hídrica</a>
+                <a href="/oceanica">Oceânica</a>
+                <a href="/biomassa">Biomassa</a>
+                <a href="/geotermica">Geotérmica</a>
+              </div>
+            </div>
+            <!-- <a href="#">Estatísticas</a> -->
+          </nav>
         </div>
         <div class="titulo">
-            <h1>O QUE SÃO AS ENERGIAS RENOVÁVEIS</h1>
+          <h1>O QUE SÃO AS ENERGIAS RENOVÁVEIS</h1>
+          <p>
+            Energias renováveis são fontes de energia naturais, inesgotáveis (em
+            escala humana) ou que se regeneram rapidamente, sendo alternativas
+            sustentáveis aos combustíveis fósseis (como petróleo e carvão). Elas
+            têm baixo impacto ambiental e são essenciais para combater as
+            mudanças climáticas.
+          </p>
+        </div>
+      </div>
+
+      <div class="tela2">
+        <div>
+          <h1>Benefícios das energias renováveis</h1>
+          <div class="conteudo">
+            <div>
+              <h2>Diminuição da Dependência de Combustíveis Fósseis</h2>
+              <p>
+                A transição para energias renováveis reduz drasticamente a
+                necessidade de petróleo, carvão e gás natural, trazendo
+                vantagens estratégicas, econômicas e ambientais.
+
+                <b>Sem ficar refém de países produtores de petróleo </b>(ex.:
+                crises globais não afetam sua luz). <b>Preço estável</b> na
+                conta de luz (sol e vento são de graça, ao contrário do gás que
+                sobe e desce). <b>Dinheiro fica no país</b> (em vez de comprar
+                petróleo da Arábia, investe em fazendas solares locais).
+              </p>
+            </div>
+            <div>
+              <h2>Redução de Emissões de Gases de Efeito Estufa</h2>
+              <p>
+                As energias renováveis representam a solução mais eficaz para a
+                mitigação das emissões de gases de efeito estufa (GEE) no setor
+                energético. Ao contrário dos combustíveis fósseis, que liberam
+                quantidades significativas de dióxido de carbono (CO₂), metano
+                (CH₄) e outros poluentes durante a combustão, as fontes
+                renováveis operam com emissões praticamente nulas em sua fase de
+                geração.
+              </p>
+              <div class="grafico">
+                <img
+                  src="{{ url_for('static', filename='imagens/matrizEnergetica.png') }}"
+                  alt="grafico de pizza"
+                  width="50%"
+                />
+                <figcaption>
+                  Matriz energética entre fontes renováveis e não-renováveis no
+                  Brasil
+                </figcaption>
+              </div>
+            </div>
+            <div>
+              <h2>Criação de Empregos e Desenvolvimento Econômico</h2>
+              <p>
+                As energias renováveis têm se mostrado um poderoso vetor de
+                desenvolvimento socioeconômico, gerando impactos positivos tanto
+                no mercado de trabalho quanto na economia como um todo.
+                Diferentemente dos setores tradicionais de energia, que tendem à
+                automatização, o segmento renovável apresenta elevada
+                intensidade de mão-de-obra qualificada e distribuída
+                territorialmente.
+              </p>
+            </div>
+            <div>
+              <h2>Economia a Longo Prazo</h2>
+              <p>
+                As energias renováveis representam não apenas uma solução
+                ambiental, mas um <b>investimento econômico estratégico</b> com
+                retornos crescentes ao longo do tempo. Seus impactos positivos
+                na economia se manifestam através de:
+              </p>
+
+              <div class="grafico">
+                <img
+                  src="{{ url_for('static', filename='imagens/crescimentoEmpregados.png') }}"
+                  alt="crescimentoEmrepregados"
+                  width="40%"
+                />
+                <figcaption>
+                  Crescimento do setor de energias renováveis e aumento de
+                  empregos no setor.
+                </figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h1>Como as Energias Renováveis Impactam o Meio Ambiente</h1>
+          <div class="conteudo">
+            <h2>Preservação da Biodiversidade</h2>
             <p>
-                Energias renováveis são fontes de energia naturais, inesgotáveis (em escala humana) ou que se regeneram
-                rapidamente, sendo alternativas sustentáveis aos combustíveis fósseis (como petróleo e carvão). Elas têm
-                baixo impacto ambiental e são essenciais para combater as mudanças climáticas.
+              A transição para fontes renováveis de energia desempenha um papel
+              crucial na <b>conservação dos ecossistemas</b> e na
+              <b>proteção da biodiversidade</b>, contrastando fortemente com os
+              impactos negativos dos combustíveis fósseis e de grandes
+              hidrelétricas tradicionais.
             </p>
+            <h2>Menos Poluição do Ar e da Água</h2>
+            <p>
+              A adoção de fontes renováveis de energia traz benefícios diretos e
+              mensuráveis para a <b>qualidade do ar e da água</b>, contrastando
+              radicalmente com os impactos poluentes dos combustíveis fósseis.
+            </p>
+          </div>
         </div>
 
-        <div class="tela2">
-            <div>
-                <h1>Benefícios das energias renováveis</h1>
-                <div class="conteudo">
+        <div id="menuEnergias">
+          <h1>Tipos de Energias</h1>
 
-                    <div>
-                        <h2>Diminuição da Dependência de Combustíveis Fósseis</h2>
-                        <p>
-                            A transição para energias renováveis reduz drasticamente a necessidade de petróleo, carvão e
-                            gás natural, trazendo vantagens estratégicas, econômicas e ambientais.
-                        <ul>
-                            <li><b>Sem ficar refém de países produtores de petróleo </b>(ex.: crises globais não afetam
-                                sua luz).</li>
-                            <li><b>Preço estável</b> na conta de luz (sol e vento são de graça, ao contrário do gás que
-                                sobe e desce).</li>
-                            <li><b>Dinheiro fica no país</b> (em vez de comprar petróleo da Arábia, investe em fazendas
-                                solares locais).</li>
-                        </ul>
-                        </p>
-                    </div>
-                    <div>
-                        <h2>Redução de Emissões de Gases de Efeito Estufa</h2>
-                        <p>
-                            As energias renováveis representam a solução mais eficaz para a mitigação das emissões de
-                            gases de efeito estufa (GEE) no setor energético. Ao contrário dos combustíveis fósseis, que
-                            liberam quantidades significativas de dióxido de carbono (CO₂), metano (CH₄) e outros
-                            poluentes durante a combustão, as fontes renováveis operam com emissões praticamente nulas
-                            em sua fase de geração.
-                        </p>
-                        <div class="grafico">
-                            <img src="{{ url_for('static', filename='imagens/matrizEnergetica.png') }}"
-                                alt="grafico de pizza" width="50%">
-                            <figcaption>Matriz energética entre fontes renováveis e não-renováveis no Brasil
-                            </figcaption>
-                        </div>
-                    </div>
-                    <div>
-                        <h2>Criação de Empregos e Desenvolvimento Econômico</h2>
-                        <p>
-                            As energias renováveis têm se mostrado um poderoso vetor de desenvolvimento socioeconômico,
-                            gerando impactos positivos tanto no mercado de trabalho quanto na economia como um todo.
-                            Diferentemente dos setores tradicionais de energia, que tendem à automatização, o segmento
-                            renovável apresenta elevada intensidade de mão-de-obra qualificada e distribuída
-                            territorialmente.
-                        </p>
-                    </div>
-                    <div>
-                        <h2>Economia a Longo Prazo</h2>
-                        <p>
-                            As energias renováveis representam não apenas uma solução ambiental, mas um <b>investimento
-                                econômico estratégico</b> com retornos crescentes ao longo do tempo. Seus impactos
-                            positivos na economia se manifestam através de:
-                        </p>
-
-                        <div class="grafico">
-                            <img src="{{ url_for('static', filename='imagens/crescimentoEmpregados.png') }}"
-                                alt="crescimentoEmrepregados" width="40%">
-                            <figcaption>Crescimento do setor de energias renováveis e aumento de empregos no setor.
-                            </figcaption>
-                        </div>
-
-                    </div>
-                </div>
+          <div class="opcoes">
+            <div class="opcao">
+              <h2>Hídrica</h2>
+              <a href="/hidrica">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/hidrica.png') }}"
+                  alt="Hídrica"
+                />
+              </a>
             </div>
-            <div>
-                <h1>Como as Energias Renováveis Impactam o Meio Ambiente</h1>
-                <div class="conteudo">
-
-                    <h2>Preservação da Biodiversidade</h2>
-                    <p>
-                        A transição para fontes renováveis de energia desempenha um papel crucial na <b>conservação dos
-                            ecossistemas</b> e na <b>proteção da biodiversidade</b>, contrastando fortemente com os
-                        impactos negativos dos combustíveis fósseis e de grandes hidrelétricas tradicionais.
-                    </p>
-                    <h2>Menos Poluição do Ar e da Água</h2>
-                    <p>A adoção de fontes renováveis de energia traz benefícios diretos e mensuráveis para a
-                        <b>qualidade do ar e da água</b>, contrastando radicalmente com os impactos poluentes dos
-                        combustíveis fósseis.
-                    </p>
-                </div>
+            <div class="opcao">
+              <h2>Solar</h2>
+              <a href="/solar">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/solar.png') }}"
+                  alt="Solar"
+                />
+              </a>
             </div>
-
-            <div id="menuEnergias">
-                <h1>Tipos de Energias</h1>
-
-                <div class="opcoes">
-
-                    <div class="opcao">
-
-                        <h2>Hídrica</h2>
-                        <a href="/hidrica">
-                            <img src="{{ url_for('static', filename='imagens/hidrica.png') }}" alt="Hídrica">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Solar</h2>
-                        <a href="/solar">
-                            <img src="{{ url_for('static', filename='imagens/solar.png') }}" alt="Solar">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Eólica</h2>
-                        <a href="/eolica">
-                            <img src="{{ url_for('static', filename='imagens/eolica.png') }}" alt="Eólica">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Biomassa</h2>
-                        <a href="/biomassa">
-                            <img src="{{ url_for('static', filename='imagens/biomassa.png') }}" alt="Biomassa">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Geotérmica</h2>
-                        <a href="/geotermica">
-                            <img src="{{ url_for('static', filename='imagens/geotermica.png') }}" alt="Geotérmica">
-                        </a>
-                    </div>
-                    <div class="opcao">
-
-                        <h2>Oceânica</h2>
-                        <a href="/oceanica">
-                            <img src="{{ url_for('static', filename='imagens/oceanica.png') }}" alt="Oceânica">
-                        </a>
-                    </div>
-                </div>
-
+            <div class="opcao">
+              <h2>Eólica</h2>
+              <a href="/eolica">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/eolica.png') }}"
+                  alt="Eólica"
+                />
+              </a>
             </div>
+            <div class="opcao">
+              <h2>Biomassa</h2>
+              <a href="/biomassa">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/biomassa.png') }}"
+                  alt="Biomassa"
+                />
+              </a>
+            </div>
+            <div class="opcao">
+              <h2>Geotérmica</h2>
+              <a href="/geotermica">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/geotermica.png') }}"
+                  alt="Geotérmica"
+                />
+              </a>
+            </div>
+            <div class="opcao">
+              <h2>Oceânica</h2>
+              <a href="/oceanica">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/oceanica.png') }}"
+                  alt="Oceânica"
+                />
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="rodape">
+      <p>©GREENERGY</p>
+    </div>
 
-        <div class="rodape">
-            <p>©GREENERGY</p>
-        </div>
-
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+  <!-- Implementação do Bootstrap-->
+  <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonte Montserrat -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/OqueSao.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/energias.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/quizzes.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='imagens/icon.svg') }}"
+      alt="200%"
+    />
+
+    <title>Greenergy</title>
+  </head>
+
+  <body>
+    <!-- Início -->
+    <div class="tela0 d-flex flex-column px-4 pt-2">
+      <div class="tela1 px-4 pt-2">
+        <!-- Menu navegação -->
+        <div class="menuNavegação">
+          <!-- Título -->
+          <h1><a href="/index">Greenergy</a></h1>
+          <!-- Ícone do menu hamburguer -->
+          <div class="menu-icon" onclick="menuSanduiche()">☰</div>
+          <!-- Navegação -->
+          <nav>
+            <a href="/index#Sobre">Sobre</a>
+            <a href="/index#Contato">Contato</a>
+            <a href="/OqueSao">O que são</a>
+            <div class="dropdown">
+              <a href="/Quizzes" class="dropbtn">Quizzes</a>
+              <div class="dropdown-content">
+                <a href="/#">Conhecimentos Gerais</a>
+                <a href="/QuizSolar">Solar</a>
+                <a href="/#">Eólica</a>
+                <a href="/#">Hídrica</a>
+                <a href="/#">Oceânica</a>
+                <a href="/#">Biomassa</a>
+                <a href="/#">Geotérmica</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+              <div class="dropdown-content">
+                <a href="/solar">Solar</a>
+                <a href="/eolica">Eólica</a>
+                <a href="/hidrica">Hídrica</a>
+                <a href="/oceanica">Oceânica</a>
+                <a href="/biomassa">Biomassa</a>
+                <a href="/geotermica">Geotérmica</a>
+              </div>
+            </div>
+            <!-- <a href="#">Estatísticas</a> -->
+          </nav>
+        </div>
+
+        <div class="titulo">
+          <h1>Quizzes</h1>
+          <p>Teste seus conhecimentos sobre energias renováveis!</p>
+        </div>
+      </div>
+
+      <!-- Sobre -->
+      <div class="tela2">
+        <a href="#"><button>Conhecimentos Gerais</button></a>
+        <a href="#"><button>Energia solar</button></a>
+        <a href="#"><button>Energia eólica</button></a>
+        <a href="#"><button>Energia hídrica</button></a>
+        <a href="#"><button>Energia oceânica</button></a>
+        <a href="#"><button>Energia de biomassa</button></a>
+        <a href="#"><button>Energia geotérmica</button></a>
+      </div>
+    </div>
+    <!-- RODAPE -->
+    <div class="rodape">
+      <p>©GREENERGY</p>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/OqueSao.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/energias.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='imagens/icon.svg') }}"
+      alt="200%"
+    />
+
+    <title>Greenergy</title>
+  </head>
+  <!-- Implementação do Bootstrap-->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
+  />
+
+  <style>
+    .tela0::before {
+      background-image: url("{{ url_for('static', filename='imagens/paisagem/paisagemGeotermica.jpg') }}");
+    }
+    .tela1 {
+      background-color: transparent;
+    }
+  </style>
+
+  <body>
+    <div class="tela0 d-flex flex-column px-4 pt-3">
+      <!-- Início -->
+      <div class="tela1 px-4 pt-2">
+        <!-- Menu navegação -->
+        <div class="menuNavegação">
+          <!-- Título -->
+          <h1><a href="/index">Greenergy</a></h1>
+          <!-- Ícone do menu hamburguer -->
+          <div class="menu-icon" onclick="menuSanduiche()">☰</div>
+          <!-- Navegação -->
+          <nav>
+            <a href="/index#Sobre">Sobre</a>
+            <a href="/index#Contato">Contato</a>
+            <a href="/OqueSao">O que são</a>
+            <div class="dropdown">
+              <a href="#" class="dropbtn">Quizzes</a>
+              <div class="dropdown-content">
+                <a href="/QuizGeral">Conhecimentos Gerais</a>
+                <a href="/QuizSolar">Solar</a>
+                <a href="/QuizEolica">Eólica</a>
+                <a href="/QuizHidrica">Hídrica</a>
+                <a href="/QuizOceanica">Oceânica</a>
+                <a href="/QuizBiomassa">Biomassa</a>
+                <a href="/QuizGeotermica">Geotérmica</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+              <div class="dropdown-content">
+                <a href="/solar">Solar</a>
+                <a href="/eolica">Eólica</a>
+                <a href="/hidrica">Hídrica</a>
+                <a href="/oceanica">Oceânica</a>
+                <a href="/biomassa">Biomassa</a>
+                <a href="/geotermica">Geotérmica</a>
+              </div>
+            </div>
+            <!-- <a href="#">Estatísticas</a> -->
+          </nav>
+        </div>
+        <div class="titulo">
+          <h1>Energia Geotérmica</h1>
+          <p>
+            A energia geotérmica é obtida do calor existente no interior da
+            Terra. Esse calor pode ser aproveitado por meio de vapor ou água
+            quente subterrânea, transformando-se em energia elétrica ou sendo
+            usada diretamente para aquecimento.
+          </p>
+        </div>
+      </div>
+
+      <div class="tela2">
+        <div>
+          <h1>Tipos</h1>
+          <div class="conteudo">
+            <div>
+              <h2>Reservatórios de vapor seco</h2>
+              <p>
+                Fontes naturais de vapor subterrâneo (sem água líquida) que
+                podem ser direcionados para turbinas, gerando eletricidade com
+                alta eficiência.
+              </p>
+            </div>
+            <div>
+              <h2>Reservatórios de água quente</h2>
+              <p>
+                Depósitos subterrâneos de água aquecida por rochas magmáticas.
+                Podem ser: De baixa temperatura (20-150°C): Usados para
+                aquecimento urbano ou estufas (ex.: Islândia). De alta
+                temperatura (>150°C): A água é liberada como vapor para gerar
+                eletricidade (ex.: Usina de Cerro Prieto, México).
+              </p>
+            </div>
+            <div>
+              <h2>Sistemas geotérmicos aprimorados (EGS)</h2>
+              <p>
+                Técnica artificial que cria reservatórios em rochas quentes e
+                secas, injetando água fria para gerar vapor.
+              </p>
+              <p>
+                Como funciona: Perfura-se rochas a 3-5 km de profundidade, onde
+                é injetada água para fraturar a rocha e absorver calor. O vapor
+                gerado nesse processo é então extraído para gerar energia.
+              </p>
+            </div>
+          </div>
+          <h1>Vantagens</h1>
+          <div class="conteudo">
+            <div>
+              <h2>Fonte limpa e renovável</h2>
+              <p>
+                A energia geotérmica aproveita o calor natural do interior da
+                Terra, que é inesgotável em escala humana. Diferentemente de
+                combustíveis fósseis, não consome recursos finitos e não gera
+                resíduos sólidos poluentes.
+              </p>
+              <p>
+                Exemplo: A Islândia usa geotermia há décadas sem esgotar seus
+                reservatórios.
+              </p>
+            </div>
+
+            <div>
+              <h2>Baixa emissão de poluentes</h2>
+              <p>
+                A geração geotérmica emite até 99% menos CO₂ que usinas a carvão
+                e quantidades insignificantes de SO₂ e NOx. Sistemas de ciclo
+                fechado (como EGS) quase não liberam gases.
+              </p>
+              <p>
+                Dado: Uma usina geotérmica emite ~45 g CO₂/kWh, contra 1.000 g
+                CO₂/kWh do carvão (IEA).
+              </p>
+            </div>
+            <div>
+              <h2>Alta disponibilidade</h2>
+              <p>
+                Funciona 24/7, independentemente de condições climáticas (sol,
+                vento ou chuva). É ideal para energia de base, complementando
+                fontes intermitentes como solar e eólica.
+              </p>
+            </div>
+            <div>
+              <h2>Menor uso de espaço</h2>
+              <p>
+                Usinas geotérmicas ocupam até 10x menos área que parques
+                solários ou eólicos de capacidade similar. A infraestrutura
+                principal é subterrânea (poços e tubulações), preservando a
+                superfície.
+              </p>
+              <p>
+                Comparação: Geotérmica: 1-2 km² para 100 MW; Solar: 10-15 km²
+                para mesma potência.
+              </p>
+            </div>
+          </div>
+
+          <h1>Desvantagens</h1>
+          <div class="conteudo">
+            <div>
+              <h2>Custo de perfuração</h2>
+              <p>
+                A exploração geotérmica exige perfurações profundas (1.500-5.000
+                metros), que representam até 50% do investimento total. Riscos
+                de perfurar poços secos ou de baixa produtividade aumentam os
+                custos.
+              </p>
+              <p>
+                Dados: O custo inicial para cada poço geotérmico varia entre US$
+                2 e 5 milhões, e projetos comerciais geralmente demandam mais de
+                10 poços, elevando o investimento total para entre US$ 100 e 300
+                milhões.
+              </p>
+            </div>
+            <div>
+              <h2>Risco de esgotamento local</h2>
+              <p>
+                Reservatórios geotérmicos podem perder pressão ou resfriar se a
+                extração de calor for mais rápida que sua recarga natural. Isso
+                exige: A reinjeção de água é fundamental para manter a pressão
+                do reservatório geotérmico, exigindo uma gestão cuidadosa para
+                evitar o colapso do campo, como ocorreu parcialmente em
+                Wairakei, na Nova Zelândia. Impacto: Redução na produção de
+                energia após décadas de uso.
+              </p>
+            </div>
+            <div>
+              <h2>Possíveis impactos sísmicos</h2>
+              <p>
+                A injeção de água em rochas quentes (especialmente em EGS) pode
+                causar microterremotos (magnitude 3.0). Embora raramente
+                perigosos, geram: Há preocupações públicas, como protestos
+                contra projetos geotérmicos na Suíça e Coreia do Sul, além de
+                restrições regulatórias que limitam a implantação dessas usinas
+                em áreas urbanas.
+              </p>
+            </div>
+          </div>
+          <h1>Aplicação</h1>
+          <div class="conteudo">
+            <div>
+              <h2>Geração de eletricidade</h2>
+              <p>
+                A energia geotérmica é usada para produzir eletricidade limpa e
+                contínua em usinas específicas: Plantas de vapor seco: Utilizam
+                vapor direto de reservatórios naturais para mover turbinas (ex.:
+                The Geysers, EUA). Plantas flash: Convertem água geotérmica
+                pressurizada em vapor para geração (ex.: Hellisheiði,
+                Islândia).> Plantas binárias: Usam trocadores de calor para
+                fluidos secundários (como isobutano).
+              </p>
+            </div>
+            <div>
+              <h2>Aquecimento direto</h2>
+              <p>
+                A energia geotérmica de baixa e média temperatura (50-150°C) é
+                ideal para sistemas de aquecimento eficientes e sustentáveis:
+                Aquecimento urbano: Redes de distribuição levam água quente para
+                residências, edifícios e hospitais. Na Islândia, 90% das casas
+                são aquecidas assim, reduzindo emissões e custos. Estufas
+                agrícolas: Permite o cultivo de vegetais mesmo em climas frios
+                (ex.: Hungria e Japão usam calor geotérmico para produzir
+                tomates e flores o ano todo). Piscinas e spas: Fontes termais
+                naturais ou artificiais são aproveitadas para turismo e terapia
+                (ex.: Blue Lagoon, na Islândia).
+              </p>
+            </div>
+            <div>
+              <h2>Uso industrial</h2>
+              <p>
+                Indústrias utilizam calor geotérmico para processos térmicos,
+                substituindo gás natural ou eletricidade: Secagem de alimentos:
+                Peixes, frutas e grãos são desidratados com calor geotérmico
+                (ex.: Islândia seca pescado para exportação). Pasteurização e
+                esterilização: Laticínios e cervejarias usam vapor geotérmico
+                para higienização. Têxteis e papel: Calor para branquear fibras
+                e secar papel (ex.: Usina de Kawerau, Nova Zelândia, abastece
+                fábricas locais). Dessalinização: Projetos-piloto usam calor
+                geotérmico para transformar água do mar em potável (ex.:
+                Grécia). Vantagem: Redução de até 70% nos custos com energia
+                térmica em comparação a combustíveis fósseis.
+              </p>
+            </div>
+          </div>
+
+          <div class="grafico">
+            <img
+              src="{{ url_for('static', filename='imagens/geracaoGeotermica.png') }}"
+              alt="crescimentoEmrepregados"
+              width="40%"
+            />
+            <figcaption>
+              Capacidade de armazenamento de energia da bacia/reservatório de
+              cada região do Brasil.
+            </figcaption>
+          </div>
+
+          <h1>Curiosidades</h1>
+          <div class="conteudo">
+            <ul class="listaCuriosidades">
+              <li>
+                A Islândia é referência mundial no uso de energia geotérmica.
+              </li>
+              <li>
+                O calor interno da Terra pode chegar a 6.000 °C no núcleo!
+              </li>
+              <li>
+                Mais de 25 países utilizam energia geotérmica para geração
+                elétrica.
+              </li>
+            </ul>
+          </div>
+          <!-- <div>
+                <h1>Veja na prática</h1>
+                <div class="interacoes">
+                    <a href="#">Compare com outras energias</a>
+                    <a href="#">Simule sua Economia</a>
+                    <a href="#">Veja aplicações reais</a>
+                    <a href="#">Quiz rápido</a>
+                </div>
+            </div> -->
+        </div>
+
+        <div id="menuEnergias">
+          <h1>Tipos de Energias</h1>
+
+          <div class="opcoes">
+            <div class="opcao">
+              <h2>Hídrica</h2>
+              <a href="/hidrica">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/hidrica.png') }}"
+                  alt="Hídrica"
+                />
+              </a>
+            </div>
+            <div class="opcao">
+              <h2>Solar</h2>
+              <a href="/solar">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/solar.png') }}"
+                  alt="Solar"
+                />
+              </a>
+            </div>
+            <div class="opcao">
+              <h2>Eólica</h2>
+              <a href="/eolica">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/eolica.png') }}"
+                  alt="Eólica"
+                />
+              </a>
+            </div>
+            <div class="opcao">
+              <h2>Biomassa</h2>
+              <a href="/biomassa">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/biomassa.png') }}"
+                  alt="Biomassa"
+                />
+              </a>
+            </div>
+            <div class="opcao">
+              <h2>Geotérmica</h2>
+              <a href="/geotermica">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/geotermica.png') }}"
+                  alt="Geotérmica"
+                />
+              </a>
+            </div>
+            <div class="opcao">
+              <h2>Oceânica</h2>
+              <a href="/oceanica">
+                <img
+                  src="{{ url_for('static', filename='imagens/energias/oceanica.png') }}"
+                  alt="Oceânica"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rodape">
+      <p>©GREENERGY</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+  <!-- Implementação do Bootstrap-->
+  <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</html>
