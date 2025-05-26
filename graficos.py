@@ -6,10 +6,12 @@ import os
 def matrizEnergetica():
     labels = ['Não Renováveis', 'Renováveis']
     sizes = [9.6, 90.4]
+
     colors = ['#d3d3d3', '#68D391']
     explode = (0.06, 0)
 
     fig, ax = plt.subplots(figsize=(7, 7), facecolor='none')
+
     wedges, texts, autotexts = ax.pie(
         sizes,
         explode=explode,
@@ -20,6 +22,7 @@ def matrizEnergetica():
         wedgeprops=dict(width=0.5, edgecolor='white'),
         textprops=dict(color="#247552", fontsize=14, fontweight='bold')
     )
+
 
     plt.title('Distribuição da Matriz Energética', fontsize=18, fontweight='bold', color='#247552')
 
@@ -36,7 +39,6 @@ def crescimentoEmpregados():
     ax.plot(x, y, color='#68D391', linewidth=2)
 
     plt.title('Crescimento de empregados', fontsize=18, fontweight='bold', color='#247552')
-
     plt.xticks(x)
     plt.yticks(y)
     ax.set_xlabel('Ano', fontsize=14, fontweight='bold', color='#247552')
@@ -270,3 +272,4 @@ def geracaoOceanica():
 
     plt.tight_layout()  # Ajustar layout
     plt.savefig('static/imagens/geracaoOceanica.png')
+

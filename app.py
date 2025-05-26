@@ -40,7 +40,6 @@ def QuizGeral():
 # @app.route('/Estatisticas')
 # def Estatisticas():
 #     return render_template('Estatisticas.html')
-
 @app.route('/OqueSao')
 def OqueSao():
     graficos.matrizEnergetica()
@@ -56,12 +55,12 @@ def hidrica():
     graficos.energiaHidreletrica()
     graficos.setorEnergiaHidrica()
     return render_template('energias/hidrica.html')
-
 @app.route('/solar')
 def solar():
     graficos.aumentoEconomiaSolar()
     graficos.energiaSolarSetor()
     return render_template('energias/solar.html')
+
 
 @app.route('/eolica')
 def eolica():
@@ -82,6 +81,9 @@ def geotermica():
 def oceanica():
     graficos.geracaoOceanica()
     return render_template('energias/oceanica.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)

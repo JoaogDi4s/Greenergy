@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
+
 }
 
 body,
 html {
+
   margin: 0;
   padding: 0;
   left: 0;
@@ -83,6 +85,7 @@ nav a:hover {
   z-index: 1000;
   flex-direction: column;
   border-radius: 8px;
+
 }
 
 /* links dentro do dropdown */
@@ -93,12 +96,14 @@ nav a:hover {
   text-decoration: none;
   font-size: 1rem;
   transition: background 0.3s;
+
 }
 
 /* hover no dropdown */
 .dropdown-content a:hover {
   background-color: #3c5718;
   color: #a2ca6c;
+
 }
 
 /* quando passa o mouse sobre o botão, aparece o menu */
@@ -191,6 +196,7 @@ nav a:hover {
   background-color: #678e34;
   transition: background-color 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
 }
 
 .inputs button:hover,
@@ -316,3 +322,5 @@ nav a:hover {
     width: 70%;
   }
 }
+
+

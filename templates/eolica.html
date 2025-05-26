@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/OqueSao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/energias.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imagens/icon.svg') }}" alt="200%">
+
+    <title>Greenergy</title>
+</head>
+<style>
+    .tela1 {
+        background-image: url("{{ url_for('static', filename='imagens/paisagemEolica.png') }}");
+    }
+</style>
+
+<body>
+    <!-- Início -->
+    <div class="tela1">
+        <!-- Menu navegação -->
+        <div class="menuNavegação">
+            <!-- Título -->
+            <h1>Greenergy</h1>
+            <!-- Ícone do menu hamburguer -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- Navegação -->
+            <nav>
+                <a href="/index#Sobre">Sobre</a>
+                <a href="/index#Contato">Contato</a>
+                <a href="/OqueSao">O que são</a>
+                <div class="dropdown">
+                    <a href="/OqueSao#menuEnergias" class="dropbtn">Energias</a>
+                    <div class="dropdown-content">
+                        <a href="/solar">Solar</a>
+                        <a href="/eolica">Eólica</a>
+                        <a href="/hidrica">Hídrica</a>
+                        <a href="/oceanica">Oceânica</a>
+                        <a href="/biomassa">Biomassa</a>
+                        <a href="/geotermica">Geotérmica</a>
+                    </div>
+                </div>
+                <a href="#">Estatísticas</a>
+            </nav>
+        </div>
+        <div class="titulo">
+            <h1>Energia Eólica</h1>
+            <p>
+                A energia eólica é gerada a partir da força dos ventos, que movimentam as hélices de aerogeradores,
+                transformando energia cinética em energia elétrica. É uma das fontes mais promissoras e sustentáveis,
+                pois depende de um recurso natural abundante e limpo.
+            </p>
+        </div>
+    </div>
+
+    <div class="tela2">
+        <div>
+            <h1>Tipos</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Eólica Onshore</h2>
+                    <p>
+                        A energia eólica onshore é gerada por turbinas instaladas em terra firme, geralmente em áreas
+                        rurais, planícies ou regiões montanhosas com ventos constantes.
+                    </p>
+                    <p>Exemplo no Brasil: O Parque Eólico de Osório (RS), um dos maiores da América Latina.</p>
+                </div>
+                <div>
+                    <h2>Eólica Offshore</h2>
+                    <p>A energia eólica offshore utiliza turbinas instaladas no oceano, onde os ventos são mais fortes e
+                        constantes.
+                    </p>
+
+                    <p>Exemplo global: O Reino Unido é líder em eólica offshore, com parques como Hornsea Project One.
+                    </p>
+                </div>
+            </div>
+            <h1>Vantagens</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Fonte renovável e limpa</h2>
+                    <p>
+                        A energia eólica é totalmente sustentável, pois depende apenas da força dos ventos, um recurso
+                        natural inesgotável. Diferentemente de combustíveis fósseis, não emite poluentes (CO₂, SO₂ ou
+                        NOx) durante a geração de energia, ajudando a combater as mudanças climáticas.
+                    </p>
+                </div>
+                <div>
+                    <h2>Baixo custo operacional</h2>
+                    <p>
+                        Após a instalação, os custos são mínimos, pois:
+                    <ul>
+                        <li>Manutenção simples: Turbinas modernas exigem poucas intervenções;</li>
+                        <li>O "combustível" (vento) é gratuito;</li>
+                        <li>Vida útil longa (20-25 anos).</li>
+                    </ul>
+                    </p>
+                </div>
+                <div>
+                    <h2>Instalação em áreas diversas</h2>
+                    <p>
+                        Turbinas eólicas podem ser adaptadas a diferentes terrenos e necessidades:
+                    <ul>
+                        <li>Onshore: Campos, montanhas ou áreas rurais (ex.: Nordeste brasileiro);</li>
+                        <li>Offshore: Oceanos, onde os ventos são mais fortes (ex.: Europa);</li>
+                        <li>Soluções híbridas: Combinadas com solar ou armazenamento em baterias.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <h1>Desvantagens</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Intermitência dos ventos</h2>
+                    <p>
+                        A geração de energia eólica não é constante, pois depende da variação natural dos ventos. Em
+                        dias de baixa velocidade ou calmaria, a produção cai drasticamente, exigindo fontes
+                        complementares (como solar ou baterias) para garantir estabilidade energética.
+                    </p>
+                </div>
+                <div>
+                    <h2>Impacto visual e sonoro</h2>
+                    <p>
+                        As turbinas eólicas podem causar alterações na paisagem e gerar ruídos, especialmente em regiões
+                        habitadas. O som das pás girando (embora modernas sejam mais silenciosas) e a altura das torres
+                        (até 150m) são pontos críticos para comunidades próximas.
+                    </p>
+                </div>
+                <div>
+                    <h2>Necessidade de grandes áreas</h2>
+                    <p>
+                        Parques eólicos exigem espaço significativo entre as turbinas para evitar interferência
+                        aerodinâmica. Embora a terra possa ser usada para agricultura simultaneamente, a instalação em
+                        larga escala requer grandes extensões territoriais.
+                    </p>
+                </div>
+                <div>
+                    <h2>Impacto sobre a fauna</h2>
+                    <p>
+                        As turbinas representam riscos para aves e morcegos, que podem colidir com as pás em movimento.
+                        Estudos indicam que o posicionamento adequado e tecnologias de detecção reduzem, mas não
+                        eliminam completamente, esse problema.
+                    </p>
+                </div>
+            </div>
+            <h1>Aplicação</h1>
+            <div class="conteudo">
+
+                <div>
+                    <h2>Residências</h2>
+                    <p>
+                        Sistemas eólicos de pequeno porte (micro e minigeradores) podem ser instalados em casas,
+                        especialmente em áreas rurais ou litorâneas com ventos constantes. Turbinas de até 10 kW atendem
+                        parte do consumo doméstico, reduzindo a conta de luz e complementando a energia solar.
+                    </p>
+                </div>
+                <div>
+                    <h2>Empresas e Indústrias</h2>
+                    <p>Comércios e fábricas instalam turbinas médias (10 kW a 1 MW) para cortar custos com energia,
+                        principalmente em regiões ventosas. Galpões industriais e shoppings podem integrar eólica com
+                        solar, criando sistemas híbridos eficientes.
+                    </p>
+                </div>
+                <div>
+                    <h2>Parques eólicos</h2>
+                    <p>
+                        Usinas eólicas comerciais, com dezenas ou centenas de turbinas, alimentam a rede elétrica
+                        nacional. No Brasil, o Nordeste lidera a produção, com parques como o Complexo Eólico de Rio do
+                        Vento (RN), que gera energia para milhões de pessoas.
+                    </p>
+                    <p>Dado: A eólica já responde por 12% da matriz elétrica brasileira (ABEEólica, 2023).</p>
+                </div>
+                <div>
+                    <h2>Áreas rurais</h2>
+                    <p>
+                        A eólica é ideal para propriedades rurais e comunidades remotas sem acesso à rede elétrica.
+                        Aplicações comuns incluem:
+                    <ul>
+                        <li>Bombeamento de água para irrigação;</li>
+                        <li>Eletrificação de cercas e armazéns;</li>
+                        <li>Sistemas off-grid com baterias.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="grafico">
+                <img src="{{ url_for('static', filename='imagens/geracaoEolica.png') }}" alt="crescimentoEmrepregados"
+                    width="40%">
+                <figcaption>Estados que mais produzem energia eólica no Brasil.
+                </figcaption>
+            </div>
+            <h1>Curiosidades</h1>
+            <div class="conteudo">
+
+                <ul class="listaCuriosidades">
+                    <li>O Brasil está entre os 10 maiores produtores de energia eólica do mundo.
+                    </li>
+                    <li>O Nordeste é a região com maior potencial eólico do país.
+                    </li>
+                    <li>
+                        Uma única turbina pode abastecer centenas de casas por mês.
+                    </li>
+                </ul>
+            </div>
+            <!-- <div>
+                <h1>Veja na prática</h1>
+                <div class="interacoes">
+
+                    <a href="#">Compare com outras energias</a>
+                    <a href="#">Simule sua Economia</a>
+                    <a href="#">Veja aplicações reais</a>
+                    <a href="#">Quiz rápido</a>
+                </div>
+            </div> -->
+        </div>
+
+        <div id="menuEnergias">
+            <h1>Tipos de Energias</h1>
+
+            <div class="opcoes">
+
+                <div class="opcao">
+
+                    <h2>Hídrica</h2>
+                    <a href="/hidrica">
+                        <img src="{{ url_for('static', filename='imagens/hidrica.png') }}" alt="Hídrica">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Solar</h2>
+                    <a href="/solar">
+                        <img src="{{ url_for('static', filename='imagens/solar.png') }}" alt="Solar">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Eólica</h2>
+                    <a href="/eolica">
+                        <img src="{{ url_for('static', filename='imagens/eolica.png') }}" alt="Eólica">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Biomassa</h2>
+                    <a href="/biomassa">
+                        <img src="{{ url_for('static', filename='imagens/biomassa.png') }}" alt="Biomassa">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Geotérmica</h2>
+                    <a href="/geotermica">
+                        <img src="{{ url_for('static', filename='imagens/geotermica.png') }}" alt="Geotérmica">
+                    </a>
+                </div>
+                <div class="opcao">
+
+                    <h2>Oceânica</h2>
+                    <a href="/oceanica">
+                        <img src="{{ url_for('static', filename='imagens/oceanica.png') }}" alt="Oceânica">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="rodape">
+        <p>©GREENERGY</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
